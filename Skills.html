@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dina's Skills</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: url(pics_project/skill_pic.jpg);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow:hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+           
+            z-index: 10000;
+            transition: background 0.3s;
+        }
+
+        header:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li {
+            list-style: none;
+            margin-left: 84px;
+            margin-right: 84px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        header ul li a:hover,
+        header ul li a.active {
+            background: #fff;
+            color: #2b1055;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+            margin-top: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .container h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            transition: transform 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .skill h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin: 10px 0;
+            }
+
+            .container {
+                margin-top: 160px;
+            }
+        }
+
+        .profile-pic {
+            width: 190px;
+            height: 190px;
+            
+            
+            animation: fadeIn 2s ease-in-out 0.5s;
+            position: absolute;
+            bottom: -75px; /* Adjust based on the image height */
+            right: -75px; /* Adjust based on the image width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Dina</div>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html" class="active">Skills</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </header>
+    
+    <div class="container">
+        <h1>My Programming Skills</h1>
+        
+        <div class="skill">
+            <img src="icons/Python-logo.png" alt="Python Logo" class="skill-logo">
+            <h2>Python</h2>
+        </div>
+        <div class="skill">
+            <img src="icons/web.png" alt="HTML CSS JavaScript Logo" class="skill-logo">
+            <h2>HTML, CSS & JavaScript</h2>
+        </div>
+        <div class="skill">
+            <img src="icons/c++.png" alt="C++ Logo" class="skill-logo">
+            <h2>C++</h2>
+        </div>
+        <div class="skill">
+            <img src="icons/java.png" alt="Java Logo" class="skill-logo">
+            <h2>Java</h2>
+        </div>
+
+       
+    </div>
+
+    <script>
+        // JavaScript to set active class on click
+        const links = document.querySelectorAll('header ul li a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                links.forEach(otherLink => otherLink.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
