@@ -1,206 +1,154 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dina's Skills</title>
-    
-    <style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
-        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-        body {
-            min-height: 100vh;
-            background-image: url(pics_project/skill_pic.jpg);
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            padding-top: 80px;
-        }
 
-        header {
-            width: 100%;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10000;
-            transition: background 0.3s;
-        }
-       
+body {
+    min-height: 100vh;
+    background-image: url(pics_project/skill_pic.jpg);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Adjust based on the height of your header */
+}
 
-        header:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.5); /* Ensure a consistent background */
+    transition: background 0.3s;
+}
 
-        header .logo {
-            font-size: 1.5em;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
-        header ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+header .logo {
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        header ul li {
-            list-style: none;
-            margin-left: 84px;
-            margin-right: 84px;
-        }
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        header ul li a {
-            text-decoration: none;
-            padding: 6px 15px;
-            color: #fff;
-            border-radius: 20px;
-        }
+header ul li {
+    list-style: none;
+    margin-left: 84px;
+    margin-right: 84px;
+}
 
-        header ul li a:hover,
-        header ul li a.active {
-            background: #fff;
-            color: #2b1055;
-        }
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            animation: fadeIn 2s ease-in-out;
-            margin-top: 120px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            max-height: 80vh; /* Set a max height */
-            overflow-y: auto; /* Enable vertical scrolling if content overflows */
-        }
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
 
-        .container h1 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em;
-        }
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    max-height: 80vh; /* Set a max height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
 
-        .skill {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px;
-            transition: transform 0.3s;
-            flex: 1 1 100%;
-            max-width: 200px;
-        }
+.container h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
 
-        .skill:hover {
-            transform: scale(1.1);
-        }
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    transition: transform 0.3s;
+    flex: 1 1 100%;
+    max-width: 200px;
+}
 
-        .skill-logo {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
+.skill:hover {
+    transform: scale(1.1);
+}
 
-        .skill h2 {
-            margin: 0;
-            font-size: 1.5em;
-        }
+.skill-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
 
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+.skill h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
 
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-            }
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
 
-            header ul {
-                flex-direction: column;
-            }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
 
-            header ul li {
-                margin: 10px 0;
-            }
+    header ul {
+        flex-direction: column;
+    }
 
-            .container {
-                margin-top: 160px;
-                flex-direction: column;
-                align-items: center;
-            }
+    header ul li {
+        margin: 10px 0;
+    }
 
-            .skill {
-                margin: 10px 0;
-            }
-        }
+    .container {
+        margin-top: 160px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .profile-pic {
-            width: 190px;
-            height: 190px;
-            animation: fadeIn 2s ease-in-out 0.5s;
-            position: absolute;
-            bottom: -75px; /* Adjust based on the image height */
-            right: -75px; /* Adjust based on the image width */
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo">Dina</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html" class="active">Skills</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </header>
-    
-    <div class="container">
-        <h1>My Programming Skills</h1>
-        
-        <div class="skill">
-            <img src="icons/Python-logo.png" alt="Python Logo" class="skill-logo">
-            <h2>Python</h2>
-        </div>
-        <div class="skill">
-            <img src="icons/web.png" alt="HTML CSS JavaScript Logo" class="skill-logo">
-            <h2>HTML, CSS & JavaScript</h2>
-        </div>
-        <div class="skill">
-            <img src="icons/c++.png" alt="C++ Logo" class="skill-logo">
-            <h2>C++</h2>
-        </div>
-        <div class="skill">
-            <img src="icons/java.png" alt="Java Logo" class="skill-logo">
-            <h2>Java</h2>
-        </div>
-    </div>
+    .skill {
+        margin: 10px 0;
+    }
+}
 
-    <script>
-        // JavaScript to set active class on click
-        const links = document.querySelectorAll('header ul li a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                links.forEach(otherLink => otherLink.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
-</body>
-</html>
+.profile-pic {
+    width: 190px;
+    height: 190px;
+    animation: fadeIn 2s ease-in-out 0.5s;
+    position: absolute;
+    bottom: -75px; /* Adjust based on the image height */
+    right: -75px; /* Adjust based on the image width */
+}
