@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dina's Projects</title>
     <style>
-       @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-body {
+       body {
     min-height: 100vh;
     background: linear-gradient(#2b1055, #7597de);
     margin: 0;
@@ -22,9 +21,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Ensure no scrollbars appear */
-    padding-top: 80px; /* Ensure this matches the header height */
+    overflow: linear-gradient(#2b1055,#7597de);
+    padding-top: 80px;
 }
+
 
 header {
     width: 100%;
@@ -76,137 +76,134 @@ header ul li a.active {
     color: #2b1055;
 }
 
-.container {
+
+        .container {
+            
+           
     padding: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     animation: fadeIn 2s ease-in-out;
-    margin-top: 120px; /* Ensure this value accounts for the header height */
+    margin-top: 120px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+        }
 
-.container h1 {
-    width: 100%;
+        .container h1 {
+            width: 100%;
     text-align: center;
     margin-bottom: 40px;
     font-size: 2em;
-    color: #613f9b;
-}
+            color: #613f9b;
+        }
 
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-    transition: transform 0.3s;
-    width: 100%;
-    max-width: 800px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-}
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            transition: transform 0.3s;
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
 
-.project:hover {
-    transform: scale(1.05);
-}
+        .project:hover {
+            transform: scale(1.05);
+        }
 
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-.project h2 {
-    margin: 20px 0 10px;
-    font-size: 1.5em;
-    color: #2b1055;
-}
+        .project h2 {
+            margin: 20px 0 10px;
+            font-size: 1.5em;
+            color: #2b1055;
+        }
 
-.project p {
-    font-size: 1em;
-    color: #333;
-    text-align: left;
-    line-height: 1.6;
-}
+        .project p {
+            font-size: 1em;
+            color: #333;
+            text-align: left;
+            line-height: 1.6;
+        }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10001;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 60px;
-}
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
 
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 700px;
-    border-radius: 10px;
-    position: relative;
-}
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            position: relative;
+        }
 
-.modal-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
 
-    header ul {
-        flex-direction: column;
-    }
+            header ul {
+                flex-direction: column;
+            }
 
-    header ul li {
-        margin: 10px 0;
-    }
+            header ul li {
+                margin: 10px 0;
+            }
 
-    .logo {
-        font-size: 1.2em; /* Adjust size for smaller screens */
-        max-width: 120px; /* Limit logo size on smaller screens */
-    }
+            .container {
+                margin-top: 160px;
+            }
+        }
+        #cmd{
+            color: #7597de;
+        }
 
-    .container {
-        margin-top: 160px;
-    }
-}
-
-#cmd {
-    color: #7597de;
-}
-
-.video-container {
+        .video-container {
     background-color: #1e2127;
     padding: 20px;
     border-radius: 5px;
@@ -222,7 +219,6 @@ video {
     height: auto;
     border-radius: 5px;
 }
-
 
     </style>
 </head>
@@ -534,7 +530,19 @@ video {
                     <section>
                         <h2>Report</h2>
                         <p>For a comprehensive analysis and results of the mushroom classification project, please refer to the <a href="reports/Projet_MachineLearning.pdf" target="_blank">full report</a>.</p>
+                       
                     </section>
+
+                    <section>
+                        <h2>Application </h2>
+
+                        <p>
+                            I created this mushroom classification application using Flask, a lightweight web framework for Python. The app is designed to help users determine whether a mushroom is toxic or edible. By inputting various attributes of the mushroom such as bruises, gill spacing, gill size, gill color, and ring type, users can utilize the predictive model embedded in the app to classify the mushroom accurately. These attributes are among the most important factors in mushroom identification, which is why I chose to focus on 5 out of the 20 possible attributes. The visually appealing interface, featuring a vibrant and whimsical mushroom-themed background, enhances the user experience while providing an educational tool for mushroom enthusiasts and foragers alike.
+                        </p>
+
+                        <img src="pics_project/mushroom_app.png"
+
+                        <p> For testing the application, go to my GitHub page. <a href="https://github.com/dinaelmnajja/APP_Mushroom"> Click Here</a></p>
                 </main>
                 
             </div>
@@ -569,7 +577,7 @@ video {
     <h2>Simulation and Applications</h2>
     <p>Using Qt Designer, the project developed desktop applications demonstrating the implementation of error-correcting codes in cryptographic systems. One application implements the Vernam cipher for cryptography, while the other applies cyclic and Goppa codes for error correction. These applications showcase the practical integration of theoretical concepts.</p>
 
-    <a href="video/screen-crypto_Ie65RswH.mp4"> the video  of the applications </a>
+    <a href="video/Crypto _App.mp4"> the video  of the applications </a>
     
     <h2>Conclusion</h2>
     <p>This project highlights the significance of combining error-correcting codes with cryptography to enhance data security and integrity. It provides a comprehensive understanding of how these two fields intersect and benefit each other.</p>
