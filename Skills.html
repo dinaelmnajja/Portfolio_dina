@@ -1,129 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dina's Skills</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dina's Projects</title>
     <style>
 
-        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-        body {
-            min-height: 100vh;
-            background-image: url(pics_project/skill_pic.jpg);
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            padding-top: 80px;
-        }
+       body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: linear-gradient(#2b1055,#7597de);
+    padding-top: 80px;
+}
 
-        header {
-            width: 100%;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10000;
-            transition: background 0.3s;
-        }
-       
 
-        header:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    transition: background 0.3s;
+}
 
-        header .logo {
-            font-size: 1.5em;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+header:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
 
-        header ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+header .logo {
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-        header ul li {
-            list-style: none;
-            margin-left: 84px;
-            margin-right: 84px;
-        }
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        header ul li a {
-            text-decoration: none;
-            padding: 6px 15px;
-            color: #fff;
-            border-radius: 20px;
-        }
+header ul li {
+    list-style: none;
+    margin-left: 84px;
+    margin-right: 84px;
+}
 
-        header ul li a:hover,
-        header ul li a.active {
-            background: #fff;
-            color: #2b1055;
-        }
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+
 
         .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            animation: fadeIn 2s ease-in-out;
-            margin-top: 120px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            position: relative;
-            max-height: 80vh; /* Set a max height */
-            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+            
+           
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
         }
 
         .container h1 {
             width: 100%;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+            color: #613f9b;
         }
 
-        .skill {
+        .project {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px;
+            margin-bottom: 40px;
             transition: transform 0.3s;
-            flex: 1 1 100%;
-            max-width: 200px;
+            width: 100%;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .skill:hover {
-            transform: scale(1.1);
+        .project:hover {
+            transform: scale(1.05);
         }
 
-        .skill-logo {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
 
-        .skill h2 {
-            margin: 0;
+        .project h2 {
+            margin: 20px 0 10px;
             font-size: 1.5em;
+            color: #2b1055;
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
+        .project p {
+            font-size: 1em;
+            color: #333;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 700px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         @media (max-width: 768px) {
@@ -141,66 +197,429 @@
 
             .container {
                 margin-top: 160px;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .skill {
-                margin: 10px 0;
             }
         }
-
-        .profile-pic {
-            width: 190px;
-            height: 190px;
-            animation: fadeIn 2s ease-in-out 0.5s;
-            position: absolute;
-            bottom: -75px; /* Adjust based on the image height */
-            right: -75px; /* Adjust based on the image width */
+        #cmd{
+            color: #7597de;
         }
+
+        .video-container {
+    background-color: #1e2127;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
     </style>
 </head>
 <body>
     <header>
         <div class="logo">Dina</div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html" class="active">Skills</a></li>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="Projects.html" class="active">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </header>
     
     <div class="container">
-        <h1>My Programming Skills</h1>
+        <h1 >My Projects</h1>
         
-        <div class="skill">
-            <img src="icons/Python-logo.png" alt="Python Logo" class="skill-logo">
-            <h2>Python</h2>
+        <div class="project" onclick="openModal('modal1')">
+            <img src="pics_project/network_pic.png" alt="Project 1 Image">
+            <h2>Encrypting Data and Communications with SSL/TLS and IPsec</h2>
+            <p>Implemented SSL/TLS for secure client-server communication using a self-signed certificate and simulated VPN traffic encryption with GNS3. Click to learn more.</p>
         </div>
-        <div class="skill">
-            <img src="icons/web.png" alt="HTML CSS JavaScript Logo" class="skill-logo">
-            <h2>HTML, CSS & JavaScript</h2>
+
+        
+
+        <!-- The Modal for SSL/TLS and VPN Project -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Encrypting Data and Communications with SSL/TLS and IPsec</h2>
+                <img src="pics_project/network_pic.png" alt="SSL/TLS Project Image">
+                <p>In our interconnected world, data and communication security is of paramount importance. </p>
+                    With the rise of sensitive data exchanges over networks, it is crucial to implement robust protection mechanisms to ensure the confidentiality, integrity, and authenticity of the information exchanged. Data and communication encryption is a fundamental pillar of cybersecurity, offering protection against threats such as data interception, content manipulation, and identity theft.
+
+                   <p>  In this context, protocols such as SSL/TLS (Secure Sockets Layer/Transport Layer Security) and IPsec (Internet Protocol Security) play a crucial role by providing encryption and security mechanisms for Internet and private network communications. </p>
+                   <p> SSL/TLS is widely used to secure online transactions, email communications, and other web applications, while IPsec is primarily used to secure large-scale network connections, such as enterprise networks and VPN (Virtual Private Network) connections.</p>
+                    
+                    <p> In this study, we will examine in detail the workings of data and communication encryption with SSL/TLS and IPsec. We will explore the fundamental principles of encryption, the operational mechanisms of SSL/TLS and IPsec, as well as their practical applications in various contexts. By understanding these concepts and mastering these technologies, organizations can enhance their security posture and effectively protect their data and communications against potential threats.</p>
+
+                   <h1>SSL/TLS: Secure Sockets Layer/Transport Layer Security </h1> 
+
+<p>Secure Sockets Layer (SSL) is a protocol for encrypting HTTP traffic, such as the connections between users' devices and web servers. </p>
+<p>ebsites that use SSL encryption have "https://" in their URL instead of "http://". </p>
+<p>SSL was replaced several years ago by Transport Layer Security (TLS), but the term "SSL" is still commonly used to refer to the protocol.</p>
+
+<p>In addition to encrypting client-server communications for web browsing, the SSL protocol can also be used in virtual private networks (VPNs).</p>
+
+<h1>TCP Handshake</h1>
+<p>The SSL/TLS session negotiation process, also known as the SSL/TLS handshake, is crucial for establishing a secure connection between a client and a server.</p>
+
+<ul class="steps">
+    <li class="step"><strong>SYN:</strong> The client initiates the connection by sending a SYN (synchronize) message to the server.</li>
+    <li class="step"><strong>SYN-ACK:</strong> The server responds with a SYN-ACK (synchronize-acknowledge) message, acknowledging the receipt of the SYN message.</li>
+    <li class="step"><strong>ACK:</strong> The client acknowledges the server's response with an ACK message. This completes the TCP handshake, establishing a basic connection.</li>
+</ul>
+
+<h1>SSL/TLS Handshake</h1>
+        <ul class="steps">
+            <li class="step"><strong>Client Hello:</strong> The client sends a "Client Hello" message to the server. This message includes the SSL/TLS version supported by the client, cipher suites supported by the client, client's random number, and other relevant settings.</li>
+            <li class="step"><strong>Server Hello:</strong> The server responds with a "Server Hello" message, which includes the SSL/TLS version selected by the server, cipher suite selected by the server, and the server's random number.</li>
+            <li class="step"><strong>Server Certificate:</strong> The server sends its digital certificate to the client. This certificate contains the server's public key, the server’s identity details, and the certificate authority's (CA) signature.</li>
+            <li class="step"><strong>Server Hello Done:</strong> The server indicates it has finished its part of the negotiation with a "Server Hello Done" message.</li>
+            <li class="step"><strong>Client Key Exchange:</strong> The client generates a "Pre-Master Secret" and encrypts it with the server's public key (from the server's certificate). The client sends this encrypted "Pre-Master Secret" to the server.</li>
+            <li class="step"><strong>Change Cipher Spec:</strong> The client sends a "Change Cipher Spec" message, indicating that the subsequent messages will be encrypted using the negotiated cipher suite and keys.</li>
+            <li class="step"><strong>Encrypted Handshake Message:</strong> The client sends an encrypted "Finished" message, which includes a hash and MAC (message authentication code) of the entire handshake so far, encrypted with the session key.</li>
+            <li class="step"><strong>Server Key Exchange and Change Cipher Spec:</strong> The server decrypts the "Pre-Master Secret" using its private key, generates the session keys, and sends a "Change Cipher Spec" message to the client.</li>
+            <li class="step"><strong>Encrypted Handshake Message:</strong> The server sends an encrypted "Finished" message to the client, also including a hash and MAC of the entire handshake so far, encrypted with the session key.</li>
+        </ul>
+
+
+                <!-- Optionally, add more images or screenshots -->
+                <img src="pics_project/ssl-handshake.png">
+
+
+                <h1> SSL/TLS certificates</h1>
+
+                <p>SSL/TLS certificates are essential for securing communications between a client and a server by encrypting data transmitted over the internet.<br>
+                 
+                    They authenticate the server’s identity and enable a secure, encrypted connection, ensuring that sensitive information such as login credentials and payment details are protected from eavesdroppers. Using SSL/TLS certificates is crucial for maintaining privacy and trust on the web.
+
+                    
+                    <h1>Creating SSL/TLS Certificates</h1>
+                    <div class="terminal">
+                        <div class="command"><strong># Create Root CA (Done once) </strong></div>
+                        <div class="command"><strong># Create Root Key </strong> </div>
+                        <div class="command"> <strong> Attention: </strong> this is the key used to sign the certificate requests, anyone holding this can sign certificates on your behalf. So keep it in a safe place!</div>
+                        <div class="command"><strong id="cmd">$ openssl genrsa -des3 -out rootCA.key 4096</strong></div>
+                        <div class="command"><strong>If you want a non password protected key just remove the -des3 option </strong></div>
+                        <div class="command"></div>
+                        <div class="command"><strong># Create and self sign the Root Certificate </strong></div>
+                        <div class="command"><strong id="cmd">$ openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.crt</strong></div>
+                        <div class="command"> Here we used our root key to create the root certificate that needs to be distributed in all the computers that have to trust us.</div>
+                        <div class="command"></div>
+                        <div class="command"><strong># Create a certificate (Done for each server)</strong></div>
+                        <div class="command">This procedure needs to be followed for each server/appliance that needs a trusted certificate from our CA</div>
+                        <div class="command"></div>
+                        <div class="command"><strong># Create the certificate key </strong> </div>
+                        <div class="command"><strong id="cmd">$ openssl genrsa -out mydomain.com.key 2048</strong></div>
+                        <div class="command"></div>
+                        <div class="command"><strong># Create the signing (csr)</strong></div>
+                        <div class="command">The certificate signing request is where you specify the details for the certificate you want to generate. This request will be processed by the owner of the Root key (you in this case since you create it earlier) to generate the certificate.</div>
+                        <div class="command"></div>
+                        <div class="command"><strong>Important:</strong> Please mind that while creating the signing request is important to specify the Common Name providing the IP address or domain name for the service, otherwise the certificate cannot be verified.</div>
+                        <div class="command"></div>
+                        <div class="command">I will describe here two ways to generate:</div>
+                        <div class="command"></div>
+                        <div class="command"><strong><h3> Method A (Interactive) </h3> </strong></div>
+                        <div class="command"> If you generate the csr in this way, openssl will ask you questions about the certificate to generate like the organization details and the Common Name (CN) that is the web address you are creating the certificate for, e.g mydomain.com.</div>
+                        <div class="command"><strong id="cmd">$ openssl req -new -key mydomain.com.key -out mydomain.com.csr</strong></div>
+                        <div class="command"></div>
+                        <div class="command"><strong><h3> Method B (One Liner)</h3> </strong></div>
+                        <div class="command">This method generates the same output as Method A but it's suitable for use in your automation :) .</div>
+                        <div class="command"><strong id="cmd">$ openssl req -new -sha256 -key mydomain.com.key -subj "/C=US/ST=CA/O=MyOrg, Inc./CN=mydomain.com" -out mydomain.com.csr</strong></div>
+                        <div class="command">If you need to pass additional config you can use the -config parameter, here for example I want to add alternative names to my certificate.</div>
+                        <div class="command"> <strong id="cmd">$ openssl req -new -sha256 \</div>
+                        <div class="command">    <strong>-key </strong> mydomain.com.key \</div>
+                        <div class="command">   <strong> -subj  </strong> "/C=US/ST=CA/O=MyOrg, Inc./CN=mydomain.com" \</div>
+                        <div class="command">   <strong> -reqexts </strong> SAN \</div>
+                        <div class="command">   <strong> -config </strong> &lt;(cat /etc/ssl/openssl.cnf \</div>
+                        <div class="command">        &lt;(printf "\n[SAN]\nsubjectAltName=DNS:mydomain.com,DNS:www.mydomain.com")) \</div>
+                        <div class="command">    <strong>-out </strong> mydomain.com.csr</div> </strong>
+                        <div class="command"></div>
+                        <div class="command"><strong># Verify the csr's content </strong></div>
+                        <div class="command"><strong id="cmd">$ openssl req -in mydomain.com.csr -noout -text </strong></div>
+                        <div class="command"></div>
+                        <div class="command"> Generate the certificate using the mydomain csr and key along with the CA Root key</div>
+                        <div class="command"><strong id="cmd">$ openssl x509 -req -in mydomain.com.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out mydomain.com.crt -days 500 -sha256 </strong></div>
+                        <div class="command"></div>
+                        <div class="command"><strong># Verify the certificate's content</strong></div>
+                        <div class="command"><strong id="cmd"> $ openssl x509 -in mydomain.com.crt -text -noout </strong></div>
+
+                        here an example of a client certificate: <br> 
+
+                        <img src="pics_project/certificate.png" alt="Project 3 Image">
+                    </div>
+
+    
+                            
+                    
+                    <p>
+                        For a detailed explanation of this topic, watch this video:
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7218750808945758208/" target="_blank">Watch the Video</a>
+                    </p>
+
+
+                    <h1>IPsec</h1> 
+
+                    <p>
+                        IPsec allows securing private data when it is transmitted over a public network. More specifically, IPsec is a group of protocols used together to establish secure connections between devices at the OSI model's layer 3 (the network layer). To do this, IPsec scrambles all messages so that only authorized parties can understand them - a process known as encryption.
+                    </p>
+                    <h3>IPsec Architecture</h3>
+                    <p>
+                        The architecture of IPsec relies on several key components, including the Authentication Header (AH), Encapsulating Security Payload (ESP), and Internet Key Exchange (IKE), each having a specific role in securing network communications.
+                    </p>
+                    <h4>Authentication Header (AH) Protocol</h4>
+                    <p>
+                        The Authentication Header (AH) protocol provides data authentication and integrity but does not offer confidentiality (no encryption). It adds an additional header to the original IP packet with a checksum based on the content.
+                    </p>
+                    <h4>Encapsulating Security Payload (ESP)</h4>
+                    <p>
+                        ESP provides confidentiality, data origin authentication, integrity, and anti-replay protection. It encrypts the payload and encapsulates it within a new IP packet, ensuring that the data remains secure during transmission.
+                    </p>
+                    <h4>Internet Key Exchange (IKE)</h4>
+                    <p>
+                        IKE is a protocol used to set up a security association (SA) in the IPsec protocol suite. IKE uses a Diffie-Hellman key exchange to create a shared secret key, which is then used to secure communications between the parties.
+                    </p>
+                
+
+                <h1> IPsec Modes  </h1>
+               <p>IPsec operates in two modes: <strong >Transport mode</strong> , which secures the data payload, and <strong>Tunnel mode</strong>, which encapsulates and protects the entire IP packet. <br>
+                For securing network traffic in my project, implementing an IPsec VPN is a strategic choice. <br>
+                This solution offers versatile configurations, such as <strong>site-to-site VPNs</strong> for connecting multiple networks securely, or remote access VPNs for secure communication from remote locations.<br>
+                 By leveraging IPsec VPN, you can achieve high levels of data confidentiality, integrity, and authentication, ensuring that your network communication is protected against unauthorized access and cyber threats. <br>
+                 This makes IPsec VPN an ideal choice for enhancing the security and reliability of your network infrastructure.
+
+                 <h1>IPsec VPN Network Simulation</h1>
+
+                 <img src="pics_project/simulation_ipsec.png">
+                 <p>This network simulation showcases a secure communication setup using IPsec VPN to connect two PCs across different network segments. The diagram includes three routers (R1, R2, and R3) and two PCs (PC1 and PC2) with the following configuration:</p>
+                 <div class="network-configuration">
+                     <ul>
+                         <li>PC1 (10.0.11.2) connects to Router R2 via interface e0.</li>
+                         <li>Router R2 is connected to Router R1 through interface f0/1 (10.0.12.1 to 10.0.12.2).</li>
+                         <li>Router R1 connects to Router R3 through interface f0/1 (10.0.23.2 to 10.0.23.1).</li>
+                         <li>Router R3 is connected to PC2 (10.0.22.2) via interface e0.</li>
+                     </ul>
+                 </div>
+                 <p>The primary objective of this setup is to ensure secure data transmission between PC1 and PC2 over the interconnected routers using an IPsec VPN. IPsec, with its encryption and authentication capabilities, protects the data from unauthorized access and tampering as it traverses the network.</p>
+                 <div class="simulation-details">
+                     <p>In this simulation:</p>
+                     <ul>
+                         <li><strong>IPsec Tunnel Mode</strong> is employed between Router R2 and Router R3. This mode encapsulates the entire IP packet, providing robust security by encrypting and authenticating the packets as they pass through the routers.</li>
+                         <li><strong>Data Confidentiality and Integrity</strong> are maintained through the use of encryption and hashing algorithms, ensuring that sensitive information is kept private and unaltered.</li>
+                         <li><strong>Secure Communication</strong> is established, enabling PC1 and PC2 to exchange data safely despite the intermediate routers and potential exposure to unsecured networks.</li>
+                     </ul>
+                 </div>
+                 <div class="content">
+                    <p>After the configuration of routers to implement an IPsec VPN, the captured packets illustrate the secure transmission of data between the routers using the Encapsulating Security Payload (ESP) protocol.</p>
+                    <p>ESP is a core component of IPsec that provides confidentiality, data origin authentication, and integrity protection of IP packets. In the Wireshark capture, you can observe multiple packets marked as ESP, indicating that the data being transmitted is encrypted and secured. This encryption ensures that the payload is protected from unauthorized access and tampering.</p>
+                    <p>The figure shows ESP packets being exchanged between the IP addresses 10.0.12.1 and 10.0.23.1, which correspond to the interfaces on Routers R2 and R3, respectively. The encapsulated payload is encrypted, as shown by the hex data in the lower pane of the capture. This demonstrates the successful application of the IPsec VPN, ensuring that the communication between the two endpoints (PC1 and PC2) is secure.</p>
+                </div>
+                <div class="more-details">
+                    <p>For more details on the router configuration and the step-by-step process of setting up the IPsec VPN, please refer to the full report <a href="reports/projet_réseau.pdf">here</a>.</p>
+                </div>
+             </div>
+                </div>
+            </div>
         </div>
-        <div class="skill">
-            <img src="icons/c++.png" alt="C++ Logo" class="skill-logo">
-            <h2>C++</h2>
+
+
+
+        <div class="project" onclick="openModal('modal2')">
+            <img src="pics_project/mushroom.jpg" alt="Project 2 Image">
+            <h2>Mushroom Classification</h2>
+            <p>The Mushroom Classification Project aims to develop a machine learning model to accurately distinguish between edible and toxic mushrooms. Click to learn more.</p>
         </div>
-        <div class="skill">
-            <img src="icons/java.png" alt="Java Logo" class="skill-logo">
-            <h2>Java</h2>
+        <!-- The Modal for Project 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Mushroom Classification</h2>
+                <img src="pics_project/mushroom.jpg" alt="Project 2 Image">
+                <main>
+                    <section>
+                        <h2>Overview</h2>
+                        <p>Mushrooms are fascinating organisms that inhabit a wide range of environments across the globe. However, their diversity presents a challenge when it comes to identifying and distinguishing edible species from toxic ones. Manual mushroom classification can be complex and risky, as many inedible or toxic species closely resemble their edible counterparts.</p>
+                        <p>In the field of machine learning, mushroom classification presents an interesting problem that can be addressed using advanced techniques. By leveraging datasets containing information on the morphological characteristics of mushrooms, such as cap shape, color, and the presence of gills, predictive models can be developed to differentiate between edible and non-edible mushrooms.</p>
+                        <p>This report explores the application of various machine learning classification algorithms to solve the mushroom classification problem. We will detail the datasets used, preprocessing techniques, feature selection, and model evaluation. Ultimately, the goal is to develop a robust and accurate model to assist in identifying edible mushrooms and reducing the risks associated with toxic mushrooms.</p>
+                    </section>
+            
+                    <section>
+                        <h2>Dataset</h2>
+                        <p>The mushroom dataset consists of descriptions of hypothetical specimens corresponding to 23 mushroom species with gills from the Agaricus and Lepiota families, drawn from the Audubon Society's North American Mushroom Guide (1981). Each species is classified as definitely edible, definitely toxic, or of unknown edibility and not recommended. The latter category has been combined with the toxic mushroom class. The guide emphasizes that there are no simple rules for determining mushroom edibility, unlike the “three leaves, let it be” rule for oak and poison ivy.</p>
+                        <img src="pics_project/data.png" alt="Screenshot of Project 2 Details">
+                        <p>Mushroom characteristics are described by the following attributes:</p>
+
+                        <ul>
+                            <li><strong>Cap Shape:</strong> bell (b), conical (c), convex (x), flat (f), knobbed (k), sunken (s)</li>
+                            <li><strong>Cap Surface: </strong>fibrous (f), grooves (g), scaly (y), smooth (s)</li>
+                            <li><strong>Cap Color: </strong>brown (n), buff (b), cinnamon (c), gray (g), green (r), pink (p), purple (u), red (e), white (w), yellow (y)</li>
+                            <li><strong>Bruises:</strong> bruises (t), no (f)</li>
+                            <li><strong>Odor: </strong>almond (a), anise (l), creosote (c), fishy (y), foul (f), musty (m), none (n), pungent (p), spicy (s)</li>
+                            <li><strong>Gill Attachment:</strong> attached (a), descending (d), free (f), notched (n)</li>
+                            <li><strong>Gill Spacing:</strong> close (c), crowded (w), distant (d)</li>
+                            <li><strong>Gill Size:</strong> broad (b), narrow (n)</li>
+                            <li><strong>Gill Color:</strong> black (k), brown (n), buff (b), chocolate (h), gray (g), green (r), orange (o), pink (p), purple (u), red (e), white (w), yellow (y)</li>
+                            <li><strong>Stalk Shape:</strong> enlarging (e), tapering (t)</li>
+                            <li><strong>Stalk Root:</strong> bulbous (b), club (c), cup (u), equal (e), rhizomorphs (z), rooted (r), missing (?)</li>
+                            <li><strong>Stalk Surface Above Ring: </strong>fibrous (f), scaly (y), silky (k), smooth (s)</li>
+                            <li><strong>Stalk Surface Below Ring:</strong> fibrous (f), scaly (y), silky (k), smooth (s)</li>
+                            <li><strong>Stalk Color Above Ring: </strong>brown (n), buff (b), cinnamon (c), gray (g), orange (o), pink (p), red (e), white (w), yellow (y)</li>
+                            <li><strong>Stalk Color Below Ring: </strong>brown (n), buff (b), cinnamon (c), gray (g), orange (o), pink (p), red (e), white (w), yellow (y)</li>
+                            <li><strong>Veil Type:</strong> partial (p), universal (u)</li>
+                            <li><strong>Veil Color:</strong> brown (n), orange (o), white (w), yellow (y)</li>
+                            <li><strong>Ring Number:</strong> none (n), one (o), two (t)</li>
+                            <li><strong>Ring Type:</strong> cobwebby (c), evanescent (e), flaring (f), large (l), none (n), pendant (p), sheathing (s), zone (z)</li>
+                            <li><strong>Spore Print Color:</strong> black (k), brown (n), buff (b), chocolate (h), green (r), orange (o), purple (u), white (w), yellow (y)</li>
+                            <li><strong>Population:</strong> abundant (a), clustered (c), numerous (n), scattered (s), several (v), solitary (y)</li>
+                            <li><strong>Habitat:</strong> grasses (g), leaves (l), meadows (m), paths (p), urban (u), waste (w), woods (d)</li>
+                        </ul>
+                        <img src="pics_project/mushroom_caracteristics.png" alt="Screenshot of Project 2 Details">
+                        <p>The aim of analyzing this dataset is to determine which characteristics are most indicative of a toxic mushroom and to train machine learning models to predict whether a mushroom is edible or toxic based on its features.</p>
+                    </section>
+            
+                    <section>
+                        <h2>Classification Algorithms Used</h2>
+                        <h3>Support Vector Machine (SVM)</h3>
+                        <p>Support Vector Machines (SVM) are powerful machine learning models used for classification and regression. The primary goal of SVM in classification is to find the optimal hyperplane that separates data into two classes while maximizing the margin between them. This margin is the distance between the hyperplane and the nearest data points from each class, known as support vectors. SVM can perform linear or nonlinear separation of data using kernel functions to project the data into a higher-dimensional space where it may be linearly separable. An optimization problem is solved to find the optimal hyperplane by minimizing the norm of the weight vector while maximizing the margin and ensuring all data points are correctly classified. Once the optimal hyperplane is found, SVM can predict the class of a new data point based on which side of the hyperplane it falls on.</p>
+                        <p>In our project, we chose to use SVM for the following reasons:</p>
+                        <ul>
+                            <li>Effective in High-Dimensional Spaces: SVM performs well in high-dimensional spaces, such as when the number of mushroom features is large (in our case, 23 features).</li>
+                            <li>Handling Nonlinear Data: SVM can effectively handle nonlinear data using kernel functions.</li>
+                            <li>Good Control of Overfitting: SVM provides good control overfitting with the regularization parameter, which is important when dealing with limited data.</li>
+                        </ul>
+            
+                        <h3>K-Nearest Neighbors (KNN)</h3>
+                        <p>The K-Nearest Neighbors (KNN) algorithm is a supervised learning method used for both regression and classification. Its operation can be likened to the analogy “tell me who your neighbors are, and I’ll tell you who you are.”</p>
+                        <p>In regression, KNN predicts the value of a target variable by averaging (or taking the median of) the target values of the K nearest observations in the feature space. For example, to predict the price of a house based on its features, KNN finds the K most similar houses and uses their average price as the prediction.</p>
+                        <p>In classification, KNN predicts the class of an observation by taking the mode (the most frequent value) of the classes of the K nearest observations. For example, to classify a mushroom as edible or toxic based on its features, KNN finds the K most similar mushrooms and assigns the most frequent class among these K neighbors to the mushroom.</p>
+                        <p>KNN does not build a predictive model from a training set like logistic regression or linear regression. Instead, it relies on the dataset as a whole to produce results, making it a type of lazy learning. KNN looks up the K closest instances in the dataset and uses their output variables to predict the class of the new observation.</p>
+                        <p>We chose to use KNN for the following reasons:</p>
+                        <ul>
+                            <li>Conceptual Simplicity: KNN is intuitive and easy to understand, as it is based on data similarity.</li>
+                            <li>No Assumptions on Data Distribution: Unlike some other algorithms, KNN does not assume anything about data distribution, making it more flexible.</li>
+                            <li>Robust to Noisy Data: KNN can perform well even with noisy data or complex decision boundaries.</li>
+                        </ul>
+            
+                        <h3>Logistic Regression</h3>
+                        <p>Logistic regression is a statistical approach used to model and analyze relationships between a binary response variable (e.g., Edible/Not Edible) and one or more explanatory variables, which can be categorical (e.g., sex) or continuous (e.g., age).</p>
+                        <p>Multinomial logistic regression extends logistic regression to handle categorical response variables with three or more categories, while ordinal logistic regression handles ordered categorical variables.</p>
+                        <p>We chose to use logistic regression for the following reasons:</p>
+                        <ul>
+                            <li>Interpretability of Coefficients: Logistic regression provides coefficients for each feature, allowing us to identify the most important characteristics for mushroom classification.</li>
+                            <li>Good Performance with Binary Classes: Logistic regression is effective and efficient for binary classification problems (edible vs. poisonous).</li>
+                        </ul>
+                    </section>
+            
+                    <section>
+                        <h2>Data Preprocessing Steps</h2>
+                        <h3>1. Data Loading</h3>
+                        <p>Data collection is a crucial step in mushroom classification, as we need data to train our model. We used a dataset containing information on various mushroom species, including their appearance, habitat, and edibility. This data was collected from reliable sources, including mushroom guides and specialized databases. By using this dataset, we provided our machine learning algorithm with a diverse set of mushroom characteristics, enabling it to generalize better and make more accurate classification decisions.</p>
+            
+                        <h3>2. Data Preprocessing</h3>
+                        <p>The main goal of data preprocessing in machine learning is to improve the quality of input data to optimize model performance and efficiency. Preprocessing aims to make the data more suitable for the algorithms by addressing issues such as missing values, noisy data, scaling, normalization, feature engineering, and more. Properly preprocessed data allows models to capture patterns and relationships more effectively, leading to more accurate predictions and insights.</p>
+                        <h4>2.1 Missing Value Identification</h4>
+                        <p>When identifying missing values in a dataset, it's important to note that missing values may not always be represented as NaN (Not a Number). They may also be indicated by other symbols or conventions.</p>
+                    </section>
+            
+                    <section>
+                        <h2>Report</h2>
+                        <p>For a comprehensive analysis and results of the mushroom classification project, please refer to the <a href="reports/Projet_MachineLearning.pdf" target="_blank">full report</a>.</p>
+                       
+                    </section>
+
+                    <section>
+                        <h2>Application </h2>
+
+                        <p>
+                            I created this mushroom classification application using Flask, a lightweight web framework for Python. The app is designed to help users determine whether a mushroom is toxic or edible. By inputting various attributes of the mushroom such as bruises, gill spacing, gill size, gill color, and ring type, users can utilize the predictive model embedded in the app to classify the mushroom accurately. These attributes are among the most important factors in mushroom identification, which is why I chose to focus on 5 out of the 20 possible attributes. The visually appealing interface, featuring a vibrant and whimsical mushroom-themed background, enhances the user experience while providing an educational tool for mushroom enthusiasts and foragers alike.
+                        </p>
+
+                        <img src="pics_project/mushroom_app.png"
+
+                        <p> For testing the application, go to my GitHub page. <a href="https://github.com/dinaelmnajja/APP_Mushroom"> Click Here</a></p>
+                </main>
+                
+            </div>
         </div>
     </div>
 
+    <div class="project" onclick="openModal('modal3')">
+        <img src="pics_project/crypto.jpg" alt="Project 3 Image">
+        <h1>Cryptology Projects</h1>
+        <h2> The relationship between error-correcting codes and cryptography </h2>
+
+        <p>while error-correcting codes and cryptography are distinct, they can complement each other in systems requiring both reliable data transmission and secure communication. Click to learn more.</p>
+    </div>
+    <!-- The Modal for Project 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h1>The relationship between error-correcting codes and cryptography</h1>
+            <img src="pics_project/crypto.jpg" alt="Project 3 Image">
+
+            <p>In today's digital world, preserving data integrity is crucial. Error-correcting codes play a vital role in detecting and correcting errors in data transmission, ensuring the reliability of communication systems.</p>
+    
+    <h2>Foundations of Cryptography</h2>
+    <p>Cryptography is essential for secure communication. It involves converting plaintext into ciphertext through encryption and reversing the process through decryption. This project explores symmetric and asymmetric cryptography, hashing algorithms, and digital certificates.</p>
+    
+    <h2>Error-Correcting Codes</h2>
+    <p>Error-correcting codes are mechanisms that detect and correct errors in data transmission. This project examines various types of codes, including Hamming codes, Reed-Solomon codes, and BCH codes, highlighting their importance in maintaining data integrity.</p>
+    
+    <h2>Error-Correcting Codes and Cryptography</h2>
+    <p>The project delves into cryptographic systems based on error-correcting codes, such as the McEliece cryptosystem and its Niederreiter variant. It discusses the security benefits and practical applications of combining error-correcting codes with cryptographic techniques.</p>
+    
+    <h2>Simulation and Applications</h2>
+    <p>Using Qt Designer, the project developed desktop applications demonstrating the implementation of error-correcting codes in cryptographic systems. One application implements the Vernam cipher for cryptography, while the other applies cyclic and Goppa codes for error correction. These applications showcase the practical integration of theoretical concepts.</p>
+
+    <a href="video/Crypto _App.mp4"> the video  of the applications </a>
+    
+    <h2>Conclusion</h2>
+    <p>This project highlights the significance of combining error-correcting codes with cryptography to enhance data security and integrity. It provides a comprehensive understanding of how these two fields intersect and benefit each other.</p>
+    
+           for more details, please refer to the <a href="reports/projet_codes_correcteurs.pdf" target="_blank">full report</a>.
+            
+        </div>
+    </div>
+</div>
+
+
+
     <script>
-        // JavaScript to set active class on click
-        const links = document.querySelectorAll('header ul li a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                links.forEach(otherLink => otherLink.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
+        // JavaScript to open the modal
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "block";
+            } else {
+                console.error("Modal with ID " + modalId + " not found.");
+            }
+        }
+
+        // JavaScript to close the modal
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "none";
+            } else {
+                console.error("Modal with ID " + modalId + " not found.");
+            }
+        }
+
+        // Close modals if the user clicks outside of them
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
     </script>
 </body>
 </html>
