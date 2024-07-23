@@ -4,21 +4,29 @@
     <title>Dina's Skills</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
         body {
             min-height: 100vh;
             background-image: url(pics_project/skill_pic.jpg);
-            background-size: cover;
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         header {
             width: 100%;
-            padding: 10px;
+            padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,38 +35,37 @@
             left: 0;
             z-index: 10000;
             transition: background 0.3s;
-            background: rgba(0, 0, 0, 0.5);
         }
+       
 
         header:hover {
             background: rgba(0, 0, 0, 0.8);
         }
 
         header .logo {
-            font-size: 1.2em;
+            font-size: 1.5em;
             color: #fff;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         header ul {
             display: flex;
-            flex-wrap: wrap;
-            margin: 0;
-            padding: 0;
-            list-style: none;
+            justify-content: center;
+            align-items: center;
         }
 
         header ul li {
-            margin: 5px;
+            list-style: none;
+            margin-left: 84px;
+            margin-right: 84px;
         }
 
         header ul li a {
             text-decoration: none;
-            padding: 6px 10px;
+            padding: 6px 15px;
             color: #fff;
             border-radius: 20px;
-            display: block;
         }
 
         header ul li a:hover,
@@ -69,34 +76,34 @@
 
         .container {
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
+            padding: 40px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             animation: fadeIn 2s ease-in-out;
-            margin-top: 80px;
+            margin-top: 120px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             position: relative;
-            max-height: calc(100vh - 120px); /* Adjust max height */
+            max-height: 80vh; /* Set a max height */
             overflow-y: auto; /* Enable vertical scrolling if content overflows */
         }
 
         .container h1 {
             width: 100%;
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+            margin-bottom: 40px;
+            font-size: 2em;
         }
 
         .skill {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px;
+            margin: 20px;
             transition: transform 0.3s;
-            flex: 1 1 calc(50% - 20px); /* Adjust to fit two columns */
-            max-width: 150px;
+            flex: 1 1 100%;
+            max-width: 200px;
         }
 
         .skill:hover {
@@ -104,15 +111,14 @@
         }
 
         .skill-logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 5px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
         }
 
         .skill h2 {
             margin: 0;
-            font-size: 1em;
-            text-align: center;
+            font-size: 1.5em;
         }
 
         @keyframes fadeIn {
@@ -123,41 +129,34 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                align-items: flex-start;
             }
 
             header ul {
                 flex-direction: column;
-                align-items: flex-start;
             }
 
             header ul li {
-                margin: 5px 0;
+                margin: 10px 0;
             }
 
             .container {
-                margin-top: 120px;
-                padding: 10px;
+                margin-top: 160px;
                 flex-direction: column;
                 align-items: center;
-                max-height: calc(100vh - 120px); /* Ensure container fits within viewport */
-                overflow-y: auto;
             }
 
             .skill {
-                margin: 5px;
-                flex: 1 1 100%; /* Stack skills in a single column */
-                max-width: 120px;
+                margin: 10px 0;
             }
+        }
 
-            .skill-logo {
-                width: 60px;
-                height: 60px;
-            }
-
-            .skill h2 {
-                font-size: 0.9em;
-            }
+        .profile-pic {
+            width: 190px;
+            height: 190px;
+            animation: fadeIn 2s ease-in-out 0.5s;
+            position: absolute;
+            bottom: -75px; /* Adjust based on the image height */
+            right: -75px; /* Adjust based on the image width */
         }
     </style>
 </head>
