@@ -24,6 +24,33 @@
             padding-top: 80px;
         }
 
+        .menu {
+    display: block; /* Show the menu by default */
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active */
+    }
+}
+
         header {
             width: 100%;
             padding: 20px 50px;
@@ -163,12 +190,15 @@
 <body>
     <header>
         <div class="logo">Dina</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html" class="active">Skills</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="Projects.html"  >Projects</a></li>
+                <li><a href="Skills.html" class="active">Skills</a></li>
+                <li><a href="Contact.html"  >Contact</a></li>
+            </ul>
+        </div>
     </header>
     
     <div class="container">
@@ -201,6 +231,15 @@
                 link.classList.add('active');
             });
         });
+
+
+
+        function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active'); // Toggle the active class
+        }
+
+        
     </script>
 </body>
 </html>
