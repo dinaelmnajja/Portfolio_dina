@@ -26,19 +26,46 @@
 }
 
 
-header {
-    width: 100%;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10000;
-    transition: background 0.3s;
+.menu {
+    display: block; /* Show the menu by default */
 }
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active */
+    }
+}
+
+
+header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            transition: background 0.3s;
+        }
 
 header:hover {
     background: rgba(0, 0, 0, 0.8);
@@ -225,15 +252,22 @@ video {
 <body>
     <header>
         <div class="logo">Dina</div>
-        <ul>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="Projects.html" class="active">Projects</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="Projects.html" class="active" >Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
     </header>
     
-    <div class="container">
+<div class="container"> 
+
+
+
+
         <h1 >My Projects</h1>
         
         <div class="project" onclick="openModal('modal1')">
@@ -260,22 +294,22 @@ video {
 
                    <h1>SSL/TLS: Secure Sockets Layer/Transport Layer Security </h1> 
 
-<p>Secure Sockets Layer (SSL) is a protocol for encrypting HTTP traffic, such as the connections between users' devices and web servers. </p>
-<p>ebsites that use SSL encryption have "https://" in their URL instead of "http://". </p>
-<p>SSL was replaced several years ago by Transport Layer Security (TLS), but the term "SSL" is still commonly used to refer to the protocol.</p>
+    <p>Secure Sockets Layer (SSL) is a protocol for encrypting HTTP traffic, such as the connections between users' devices and web servers. </p>
+    <p>ebsites that use SSL encryption have "https://" in their URL instead of "http://". </p>
+    <p>SSL was replaced several years ago by Transport Layer Security (TLS), but the term "SSL" is still commonly used to refer to the protocol.</p>
 
-<p>In addition to encrypting client-server communications for web browsing, the SSL protocol can also be used in virtual private networks (VPNs).</p>
+    <p>In addition to encrypting client-server communications for web browsing, the SSL protocol can also be used in virtual private networks (VPNs).</p>
 
-<h1>TCP Handshake</h1>
-<p>The SSL/TLS session negotiation process, also known as the SSL/TLS handshake, is crucial for establishing a secure connection between a client and a server.</p>
+    <h1>TCP Handshake</h1>
+     <p>The SSL/TLS session negotiation process, also known as the SSL/TLS handshake, is crucial for establishing a secure connection between a client and a server.</p>
 
-<ul class="steps">
-    <li class="step"><strong>SYN:</strong> The client initiates the connection by sending a SYN (synchronize) message to the server.</li>
-    <li class="step"><strong>SYN-ACK:</strong> The server responds with a SYN-ACK (synchronize-acknowledge) message, acknowledging the receipt of the SYN message.</li>
-    <li class="step"><strong>ACK:</strong> The client acknowledges the server's response with an ACK message. This completes the TCP handshake, establishing a basic connection.</li>
-</ul>
+   <ul class="steps">
+     <li class="step"><strong>SYN:</strong> The client initiates the connection by sending a SYN (synchronize) message to the server.</li>
+     <li class="step"><strong>SYN-ACK:</strong> The server responds with a SYN-ACK (synchronize-acknowledge) message, acknowledging the receipt of the SYN message.</li>
+     <li class="step"><strong>ACK:</strong> The client acknowledges the server's response with an ACK message. This completes the TCP handshake, establishing a basic connection.</li>
+    </ul>
 
-<h1>SSL/TLS Handshake</h1>
+   <h1>SSL/TLS Handshake</h1>
         <ul class="steps">
             <li class="step"><strong>Client Hello:</strong> The client sends a "Client Hello" message to the server. This message includes the SSL/TLS version supported by the client, cipher suites supported by the client, client's random number, and other relevant settings.</li>
             <li class="step"><strong>Server Hello:</strong> The server responds with a "Server Hello" message, which includes the SSL/TLS version selected by the server, cipher suite selected by the server, and the server's random number.</li>
@@ -426,15 +460,17 @@ video {
              </div>
                 </div>
             </div>
-        </div>
+        
+</div>
 
-
-
+   <div class="container">
         <div class="project" onclick="openModal('modal2')">
             <img src="pics_project/mushroom.jpg" alt="Project 2 Image">
             <h2>Mushroom Classification</h2>
             <p>The Mushroom Classification Project aims to develop a machine learning model to accurately distinguish between edible and toxic mushrooms. Click to learn more.</p>
         </div>
+
+    
         <!-- The Modal for Project 2 -->
         <div id="modal2" class="modal">
             <div class="modal-content">
@@ -547,17 +583,20 @@ video {
                 
             </div>
         </div>
-    </div>
+    
+   </div>
+    
+<div class="container">
 
-    <div class="project" onclick="openModal('modal3')">
+      <div class="project" onclick="openModal('modal3')">
         <img src="pics_project/crypto.jpg" alt="Project 3 Image">
         <h1>Cryptology Projects</h1>
         <h2> The relationship between error-correcting codes and cryptography </h2>
 
         <p>while error-correcting codes and cryptography are distinct, they can complement each other in systems requiring both reliable data transmission and secure communication. Click to learn more.</p>
-    </div>
-    <!-- The Modal for Project 3 -->
-    <div id="modal3" class="modal">
+       </div>
+     <!-- The Modal for Project 3 -->
+      <div id="modal3" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal3')">&times;</span>
             <h1>The relationship between error-correcting codes and cryptography</h1>
@@ -565,30 +604,355 @@ video {
 
             <p>In today's digital world, preserving data integrity is crucial. Error-correcting codes play a vital role in detecting and correcting errors in data transmission, ensuring the reliability of communication systems.</p>
     
-    <h2>Foundations of Cryptography</h2>
-    <p>Cryptography is essential for secure communication. It involves converting plaintext into ciphertext through encryption and reversing the process through decryption. This project explores symmetric and asymmetric cryptography, hashing algorithms, and digital certificates.</p>
+     <h2>Foundations of Cryptography</h2>
+     <p>Cryptography is essential for secure communication. It involves converting plaintext into ciphertext through encryption and reversing the process through decryption. This project explores symmetric and asymmetric cryptography, hashing algorithms, and digital certificates.</p>
     
-    <h2>Error-Correcting Codes</h2>
-    <p>Error-correcting codes are mechanisms that detect and correct errors in data transmission. This project examines various types of codes, including Hamming codes, Reed-Solomon codes, and BCH codes, highlighting their importance in maintaining data integrity.</p>
+     <h2>Error-Correcting Codes</h2>
+     <p>Error-correcting codes are mechanisms that detect and correct errors in data transmission. This project examines various types of codes, including Hamming codes, Reed-Solomon codes, and BCH codes, highlighting their importance in maintaining data integrity.</p>
     
-    <h2>Error-Correcting Codes and Cryptography</h2>
-    <p>The project delves into cryptographic systems based on error-correcting codes, such as the McEliece cryptosystem and its Niederreiter variant. It discusses the security benefits and practical applications of combining error-correcting codes with cryptographic techniques.</p>
+     <h2>Error-Correcting Codes and Cryptography</h2>
+     <p>The project delves into cryptographic systems based on error-correcting codes, such as the McEliece cryptosystem and its Niederreiter variant. It discusses the security benefits and practical applications of combining error-correcting codes with cryptographic techniques.</p>
     
-    <h2>Simulation and Applications</h2>
-    <p>Using Qt Designer, the project developed desktop applications demonstrating the implementation of error-correcting codes in cryptographic systems. One application implements the Vernam cipher for cryptography, while the other applies cyclic and Goppa codes for error correction. These applications showcase the practical integration of theoretical concepts.</p>
+     <h2>Simulation and Applications</h2>
+     <p>Using Qt Designer, the project developed desktop applications demonstrating the implementation of error-correcting codes in cryptographic systems. One application implements the Vernam cipher for cryptography, while the other applies cyclic and Goppa codes for error correction. These applications showcase the practical integration of theoretical concepts.</p>
 
-    <a href="video/Crypto _App.mp4"> the video  of the applications </a>
+     <a href="video/Crypto _App.mp4"> the video  of the applications </a>
     
-    <h2>Conclusion</h2>
-    <p>This project highlights the significance of combining error-correcting codes with cryptography to enhance data security and integrity. It provides a comprehensive understanding of how these two fields intersect and benefit each other.</p>
+     <h2>Conclusion</h2>
+     <p>This project highlights the significance of combining error-correcting codes with cryptography to enhance data security and integrity. It provides a comprehensive understanding of how these two fields intersect and benefit each other.</p>
     
            for more details, please refer to the <a href="reports/projet_codes_correcteurs.pdf" target="_blank">full report</a>.
             
         </div>
-    </div>
+     </div>
+
+
 </div>
 
+<div class="container">
 
+     <div class="project" onclick="openModal('modal4')">
+     <img src="pics_project/security_app.jpg" alt="Project 4 Image">
+     <h1>Security Application</h1>
+    
+
+     <p>my security application, designed to enhance digital safety by addressing various security concerns. In today’s digital landscape, protecting users from malware, phishing attacks, and ensuring data integrity is crucial. Click to learn more.</p>
+     </div>
+
+   
+
+      <!-- The Modal for Project 4-->
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+         <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h1>Security Application</h1>
+         <img src="pics_project/security_app.jpg" alt="Project 3 Image">
+
+        <p> In today's digital age, ensuring security is paramount to safeguarding our personal and professional lives.</p> <p> Cyber threats are increasingly sophisticated, making it essential to have reliable tools for verification. </p> <p>My security app is designed specifically to verify security measures, helping users avoid potential attacks by detecting malware links and files, identifying phishing emails, and enabling text encryption using SHA or MD5. </p> <p>With my security app, users can navigate the digital landscape with confidence, knowing they have an effective solution in place to validate their safety and protect sensitive information.</p>
+
+         
+
+        <h2>Core Functions</h2>
+
+        <p>The application features three core functions:</p>
+
+        <p> <strong>Malware Detection: </strong></p>
+       <img src="pics_project/malware_detect.png">
+
+       <p>This function allows the app to detect malware links and scan files for potential threats. Utilizing advanced machine learning models in the backend, it ensures efficient and accurate threat detection, helping users stay safe from harmful software.</p>
+       <p> <strong>Email Identification: </strong> </p>
+       <img src="pics_project/Phishing_checker.png">
+       <p>The application identifies phishing emails by analyzing their content for suspicious patterns. This feature is vital in protecting users from deceptive messages that aim to steal sensitive information.</p>
+       <p> <strong> Integrity Verification: </strong></p>
+      <img src="pics_project/Hashing.png">
+      <p>To ensure data integrity, the app hashes text using MD5 and SHA1 algorithms. Hashing verifies that the information remains unchanged and unaltered, providing users with confidence in their data’s security.</p>
+
+      <h2> Technical Implementation</h2>
+      <p>The technical implementation involves: </p>
+
+
+      <p><strong>Machine Learning Models: </strong>These models are trained to recognize and identify threats effectively, allowing for real-time detection and response.</p>
+      <p><strong>QT Designer: </strong>This tool is used to create a user-friendly interface, making the application accessible to users of all technical levels.</p>
+
+
+      <h2> Machine Learning Models</h2>
+      <p> In my security application, I’ve implemented two machine learning models to enhance digital safety:</p>
+
+      <p> <strong> Links Detection: </strong> This model is designed to detect whether a URL is malicious or safe by analyzing key characteristics such as URL length, the presence of suspicious symbols (@, ?, -, etc.), the use of HTTPS, and whether the URL contains an IP address. By leveraging features that indicate abnormal patterns commonly found in phishing or malicious URLs, the model can predict if a link poses a security threat.</p> <p> The use of machine learning allows for real-time, automated link verification, making the detection process highly efficient and accurate.</p>
+      <p> <strong>  Email Detection: </strong> This model analyzes email content to detect phishing attempts. It identifies suspicious patterns such as keywords, attachments, and links often used in phishing schemes. By processing textual features through Natural Language Processing (NLP) techniques, the model can classify emails as either safe or phishing with high precision. This feature provides users with a reliable way to protect themselves from falling victim to deceptive emails.</p>
+      <br>
+
+
+     Let's focus now on the <h2> Links Detection :</h2>
+
+     <br>
+
+
+     To better understand how the model detects malicious links, I focus on the structure of a URL. By analyzing different components such as the protocol, domain name, and path, the model can identify suspicious patterns. Below is an illustration of a URL's structure, highlighting the elements that play a critical role in determining whether a link is safe or potentially harmful.
+
+      <img src="pics_project/url_structure.png">
+    <br>
+     The dataset utilized in this project comprises a diverse collection of URLs categorized into benign, defacement, phishing, and malware. Each entry in the dataset is processed to extract essential features that will aid in the classification task.
+
+     <img src="pics_project/malware_data.png">
+     <br>
+
+     Before predicting whether a URL is malicious, a significant amount of preprocessing is necessary. I need to perform several key steps to clean and transform the data, such as extracting relevant features (e.g., length of the URL, presence of suspicious symbols, and protocol type), converting categorical data into numerical form, and handling missing or irrelevant data. This careful treatment ensures that the model receives optimized input, allowing for more accurate and reliable predictions. Below is an illustration of a URL's structure, which showcases the components analyzed by the model.
+
+     <br>
+
+      <p> <strong>Step 1: Omit "www." from URLs </strong> </p>
+     <br>
+
+     <img src="pics_project/step1.png" >
+
+     <br>
+
+     In this initial step, I will preprocess the URLs by removing the "www." prefix. This normalization ensures consistency in the data, allowing for more accurate analysis and model predictions. By standardizing the format of the URLs, I reduce the risk of treating the same link as different due to variations in prefix usage.
+
+
+
+
+     This step is crucial for enhancing the effectiveness of the subsequent detection algorithms, as it simplifies the input data while maintaining its integrity.
+
+     <br>
+
+     <p> <strong> Step 2: Mapping URL Categories </strong></p>
+
+     <br>
+
+      <p> In this step, I will categorize the URLs by creating a new column named "Category" in the dataset. I define a mapping of types to numerical values using the following dictionary: </p>
+
+
+     <br>
+
+     <img src="pics_project/step2.png" >
+
+      <br>
+
+
+
+      <p> <strong> Step 3: Calculate URL Length </strong></p>
+
+     <br>
+
+ In this step, I will create a new column called "url_len" to store the length of each URL in the dataset. This feature is essential for analyzing the characteristics of potentially malicious links, as the length of a URL can be indicative of its legitimacy.
+
+ <img src="pics_project/step3.png">
+
+ <br>
+
+ This operation converts each URL to a string (if it isn't already) and computes its length, storing the result in the new "url_len" column. By including this feature, I aim to provide additional context for the model, which may help improve detection accuracy.
+
+ <br>
+
+ <p> <strong> Step 4: Extract Top-Level Domain (TLD) </strong></p>
+
+ <br> 
+ In this step, I will define a function named process_tld to extract the top-level domain (TLD) from each URL. The TLD can provide valuable insights into the legitimacy of a website, as certain domains are more commonly associated with malicious activity.
+
+ <img src="pics_project/step4.png">
+
+ <br>
+
+ <p> <strong> Step 5: Count Special Characters in URLs </strong></p>
+
+ <br>
+
+ In this step, I will create features that count the occurrences of specific special characters in each URL. These characters can be indicative of malicious intent and help the model identify potentially harmful links.
+
+ <br>
+
+ First, I will define a list of special characters to analyze,Next, I will iterate through this list and create a new column in the dataset for each character, storing the count of its occurrences in the URLs:
+
+
+ <img src="pics_project/step5.png">
+
+ <br>
+
+ <p> <strong> Step 6: Detect Abnormal URLs </strong></p>
+
+ <br>
+
+
+ In this step, I will define a function named abnormal_url that checks for abnormalities in a given URL based on its hostname. This can help identify potential phishing attempts or other malicious activities.
+
+ <br>
+
+ <img src="pics_project/step6.png">
+
+ <p> <strong> Step 7: Check for Secure HTTP (HTTPS) </strong></p>
+
+ <br>
+
+ In this step, I will define a function named httpSecure to determine whether a given URL uses the secure HTTPS protocol. This feature is important for assessing the security of a URL, as HTTPS is typically associated with legitimate and secure websites.
+
+ <br>
+
+ <img src="pics_project/step7.png">
+
+
+ <p> <strong>Step 8: Count Numeric Digits in URLs </strong></p>
+ <br>
+
+ In this step, I will define a function named digit_count that counts the number of numeric digits present in a given URL. The presence of digits can be a characteristic of certain types of malicious URLs.
+
+ <br>
+
+ <img src="pics_project/step8.png">
+
+ <br>
+
+ <p> <strong> Step 9: Count Alphabetic Letters in URLs</strong></p>
+
+ <br>
+
+ In this step, I will define a function named letter_count that counts the number of alphabetic letters in a given URL. The ratio of letters to other characters can be useful for identifying potentially malicious URLs.
+
+ <img src="pics_project/step9.png">
+
+ <br>
+
+ <p> <strong> 
+    Step 10: Detect URL Shortening Services </strong></p>
+
+ <br>
+
+ In this step, I will define a function named Shortining_Service to check if a given URL belongs to a known URL shortening service. URLs from such services can often be used to obscure the destination, which is a common tactic in phishing and malware attacks.
+
+ <img src="pics_project/step10.png">
+
+ <br>
+
+
+ <p> <strong> Step 11: Check for IP Address in URLs </strong></p>
+ <br>
+
+  In this step, I will define a function named having_ip_address to determine if a given URL contains an IP address. URLs with embedded IP addresses can often be a sign of malicious intent, as they may bypass domain-based security measures.
+
+  <br>
+
+  <img src="pics_project/step11.png">
+  <br>
+
+
+  <h2> Training Models Of Malware Links </h2>
+   <br> 
+
+   <p>I implemented both Decision Tree Classifier and Random Forest models. </p> <p>These models analyze the extracted features to predict whether a URL is malicious or safe. By using a large dataset and ensemble learning (in the case of Random Forest), the models are capable of identifying patterns that distinguish harmful URLs from legitimate ones. This ensures that the application can provide accurate, real-time protection against potentially dangerous links.</p>
+   <br>
+
+  <h2> Classification Report </h2>
+
+   After evaluating the model on the test dataset, the following classification metrics were obtained
+
+ <img src="pics_project/classification_report.png">
+
+
+
+   <br>
+
+   <h2> Saving The Model Of Malware Links </h2>
+
+   <br>
+   After completing the training and evaluation of the malware detection model, I saved it using joblib. This allows me to load the trained model in the future for malware detection without retraining it. The model is saved as a .pkl file for easy reuse.
+
+   <img src="pics_project/malware_model.png">
+
+   Let's return to the <strong> <h2>Phishing Detection : </h2> </strong> 
+
+  <br>
+
+   In this project, I utilize a dataset specifically curated for detecting phishing emails. The dataset contains a variety of email samples, each labeled as either "phishing" or "safe" Key features extracted from the emails include the presence of suspicious URLs, unusual sender addresses, and various textual attributes that may indicate phishing attempts.
+
+
+   <br>
+
+   <img src="pics_project/phishing_data.png">
+
+   <h2> Training Models Of Phishing Emails </h2>
+
+   <br>
+
+   In the phishing email detection project, I employed two machine learning models: Random Forest and Support Vector Machine (SVM). These models were chosen for their strong performance in classification tasks. Random Forest is an ensemble method that operates by constructing multiple decision trees and aggregating their results to make robust predictions, while SVM works by finding the optimal hyperplane that best separates the phishing and safe emails in a high-dimensional space. In the following steps, I will detail the application of these models and evaluate their performance.
+
+
+
+
+   <h2> Saving The Model Of Phishing Emails </h2>
+
+   <br>
+
+   After successfully training and evaluating the Random Forest and SVM models, I saved the final model using joblib. This allows for future use of the trained model without needing to retrain it. The model is saved as a .pkl file, which can be loaded at any time to make predictions on new data.
+
+   <br>
+
+   <img src="pics_project/phishing_model.png">
+
+
+
+
+    <br>
+
+    <h2> Final Step </h2>
+
+    After saving the two models for malware and phishing detection, I utilize them in my application to enhance prediction accuracy and overall performance. The models are loaded using the joblib library, which efficiently handles the serialization and deserialization of Python objects. By integrating these pre-trained models into my app, I can provide real-time analysis and detection capabilities, allowing users to quickly identify potential threats. This setup not only streamlines the prediction process but also leverages the machine learning techniques I've implemented, ensuring that the application delivers reliable results in detecting malicious links and phishing emails.
+
+    <br>
+
+    If you want to try the app, check the URL here in my github. <a href="https://github.com/dinaelmnajja/Security_App">  Link </a>
+
+      </div>
+   </div>
+
+
+
+
+
+</div>
+
+<div class="container">
+    <div class="project" onclick="openModal('modal5')">
+       <img src="pics_project/RINAM.png" alt="Project 5 Image">
+
+      <h1>Internship Project</h1>
+    
+      <h2> Study and Implementation of Security Solutions for RINAM</h2>
+       <p>In my internship project, my main objective was to strengthen the security of the RINAM network by identifying vulnerabilities and proposing effective solutions. Click to learn more.</p>
+    </div>
+
+ <!-- The Modal for Project 5-->
+    <div id="modal5" class="modal">
+       <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h1>Study and Implementation of Security Solutions for RINAM </h1>
+        <img src="pics_project/RINAM.png" alt="Project 5 Image">
+
+
+        In my internship project, my main objective was to strengthen the security of the complex network by identifying potential vulnerabilities and assessing measures to protect the integrity of data and communications. I aimed to propose effective solutions to ensure the resilience of RINAM against threats while guaranteeing the continuity and reliability of essential air navigation services at the airport.
+
+
+        <br>
+
+
+        <br>
+
+
+        <br>
+
+
+
+        To achieve this, I defined two specific objectives: first, to deploy the IPsec VPN protocol between the two VMs (Linux and Ubuntu) to secure their communication; and second, to implement the SSH protocol on a router in another simulation for remote security. These measures aimed to improve data exchange protection and enhance security mechanisms within the network.
+        
+
+        <br>
+
+
+
+       </div>
+    </div>
+
+</div>
 
     <script>
         // JavaScript to open the modal
@@ -620,6 +984,17 @@ video {
                 }
             }
         }
+
+
+
+
+        function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active'); // Toggle the active class
+        }
+
+
+   
     </script>
 </body>
 </html>
