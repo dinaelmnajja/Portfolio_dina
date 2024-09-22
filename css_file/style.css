@@ -50,6 +50,24 @@ body {
     }
 }
 
+.about-container {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center vertically */
+    margin: 50px; /* Add some space around the container */
+}
+
+.profile-pic {
+    width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20%; /* Optional: makes the image circular */
+    margin-right: 60px; /* Space between the image and text */
+}
+
+.about-text {
+    flex: 1; /* Allows the text section to take up remaining space */
+}
+
+
 
 header {
     width: 100%;
