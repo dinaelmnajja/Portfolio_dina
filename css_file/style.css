@@ -50,22 +50,41 @@ body {
     }
 }
 
+/* Flexbox layout for larger screens */
 .about-container {
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Center vertically */
-    margin: 50px; /* Add some space around the container */
+    display: flex;
+    align-items: center;
+    margin: 20px;
 }
 
 .profile-pic {
-    width: 200px; /* Adjust the size as needed */
+    width: 150px; /* Adjust the size as needed */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 40%; /* Optional: makes the image circular */
-    margin-right: 60px; /* Space between the image and text */
+    border-radius: 50%; /* Circular profile picture */
+    margin-right: 20px; /* Space between image and text */
 }
 
 .about-text {
-    flex: 1; /* Allows the text section to take up remaining space */
+    flex: 1; /* Allow text to take up the remaining space */
 }
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .about-container {
+        display: block; /* Stacks the image and text vertically */
+        text-align: center; /* Centers text on mobile */
+    }
+
+    .profile-pic {
+        width: 100px; /* Smaller profile picture on mobile */
+        margin: 0 auto 20px auto; /* Centers the picture and adds space below it */
+    }
+
+    .about-text {
+        text-align: left; /* Adjust text alignment for readability if needed */
+    }
+}
+
 
 
 
