@@ -2,214 +2,239 @@
 <html>
 <head>
     <title>Dina's Contacts</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
-       @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
+        @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(#2b1055, #7597de);
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensure no scrollbars appear */
+            position: relative; /* Contain flowers within this element */
+            padding-top: 80px;
+        }
 
-body {
-    min-height: 100vh;
-    background: linear-gradient(#2b1055, #7597de);
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensure no scrollbars appear */
-    position: relative; /* Contain elements within this element */
-    padding-top: 80px; /* Ensure this matches the header height */
+        .menu {
+    display: block; /* Show the menu by default */
 }
 
-header {
-    width: 100%;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    transition: background 0.3s;
-    background: rgba(0, 0, 0, 0.5); /* Ensure a consistent background */
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
 }
 
-header:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-header .logo {
-    font-size: 1.5em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header ul li {
-    list-style: none;
-    margin-left: 84px;
-    margin-right: 84px;
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    border-radius: 20px;
-}
-
-header ul li a:hover,
-header ul li a.active {
-    background: #fff;
-    color: #2b1055;
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
-    margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-}
-
-.container h1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-    color: #2b1055;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    margin: 0 15px;
-    transition: transform 0.3s;
-    text-align: center;
-    text-decoration: none;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social-icons a:hover img {
-    transform: scale(1.2) rotate(10deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: -75px; /* Adjust based on the image height */
-    right: -75px; /* Adjust based on the image width */
-    animation: fadeIn 0s ease-in-out 0.5s;
-}
-
-.flowers {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Prevent interaction with flowers */
-    overflow: hidden;
-    z-index: 0; /* Ensure flowers are behind other content */
-}
-
-.flower {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url('design/flower_.png'); /* Ensure this path is correct */
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    from {
-        transform: translateY(-100px) rotate(0deg);
-    }
-    to {
-        transform: translateY(100vh) rotate(360deg);
-    }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-    }
-}
-
+/* Media query for mobile devices */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
+    .menu {
+        display: none; /* Hide menu on small screens */
     }
 
-    header ul {
-        flex-direction: column;
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
     }
 
-    header ul li {
-        margin: 10px 0;
-    }
-
-    .logo {
-        font-size: 1.2em; /* Adjust size for smaller screens */
-        max-width: 120px; /* Limit logo size on smaller screens */
-    }
-
-    .container {
-        margin-top: 160px;
+    .menu.active {
+        display: block; /* Show menu when active */
     }
 }
 
+        header {
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            transition: background 0.3s;
+        }
+
+        header:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li {
+            list-style: none;
+            margin-left: 84px;
+            margin-right: 84px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        header ul li a:hover,
+        header ul li a.active {
+            background: #fff;
+            color: #2b1055;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out, glow 2s infinite alternate;
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+
+        .container h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #2b1055;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            transition: transform 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: -75px; /* Adjust based on the image height */
+            right: -75px; /* Adjust based on the image width */
+            animation: fadeIn 0s ease-in-out 0.5s;
+        }
+
+        .flowers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Prevent interaction with flowers */
+            overflow: hidden;
+            z-index: 0; /* Ensure flowers are behind other content */
+        }
+
+        .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-image: url('design/flower_.png'); /* Ensure this path is correct */
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from {
+                transform: translateY(-100px) rotate(0deg);
+            }
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin: 10px 0;
+            }
+
+            .logo {
+                font-size: 1.2em; /* Adjust size for smaller screens */
+                max-width: 120px; /* Limit logo size on smaller screens */
+            }
+
+            .container {
+                margin-top: 160px;
+            }
+        }
     </style>
 </head>
 <body>
 <header>
     <div class="logo">Dina</div>
-    <ul>
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Skills.html">Skills</a></li>
-        <li><a href="Contact.html" class="active">Contact</a></li>
-    </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="Projects.html"  >Projects</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Contact.html" class="active" >Contact</a></li>
+            </ul>
+        </div>
 </header>
 <div class="container">
     <h1>My Contacts</h1>
@@ -226,6 +251,10 @@ header ul li a.active {
         </a>
         <a href="https://www.facebook.com/profile.php?id=100025232920778&mibextid=kFxxJD" target="_blank">
             <img src="icons/facebook.jpg" alt="Facebook">
+        </a>
+
+        <a href="https://github.com/dinaelmnajja" target="_blank">
+            <img src="pics_project/github.png" alt="GitHub">
         </a>
     </div>
 
@@ -260,6 +289,13 @@ header ul li a.active {
     for (let i = 0; i < 50; i++) {
         createFlower();
     }
+
+
+    function toggleMenu() {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active'); // Toggle the active class
+        }
+
 </script>
 </body>
 </html>
