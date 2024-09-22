@@ -23,6 +23,34 @@ body {
     padding-top: 80px;
 }
 
+.menu {
+    display: block; /* Show the menu by default */
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active */
+    }
+}
+
+
 header {
     width: 100%;
     padding: 20px 50px;
@@ -32,46 +60,45 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 10000;
     transition: background 0.3s;
 }
 
 header:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+            background: rgba(0, 0, 0, 0.8);
+        }
 
-header .logo {
-    font-size: 1.5em;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
+        header .logo {
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
 
-header ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-header ul li {
-    list-style: none;
-    margin-left: 84px;
-    margin-right: 84px;
-}
+        header ul li {
+            list-style: none;
+            margin-left: 84px;
+            margin-right: 84px;
+        }
 
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    border-radius: 20px;
-}
+        header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
 
-header ul li a:hover,
-header ul li a.active {
-    background: #fff;
-    color: #2b1055;
-}
+        header ul li a:hover,
+        header ul li a.active {
+            background: #fff;
+            color: #2b1055;
+        }
 
 
 .container {
