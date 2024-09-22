@@ -4,14 +4,14 @@
     <title>Dina's Skills</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
         @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
             min-height: 100vh;
             background-image: url(pics_project/skill_pic.jpg);
@@ -25,38 +25,49 @@
         }
 
         .menu {
-    display: block; /* Show the menu by default */
-}
+            display: block; /* Show the menu by default */
+        }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    z-index: 10001;
-    margin-left: auto; /* This pushes the button to the right */
-}
+        .menu-toggle {
+            display: none; /* Hide the menu toggle by default */
+        }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    .menu {
-        display: none; /* Hide menu on small screens */
-    }
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .menu {
+                display: none; /* Hide menu on small screens */
+            }
 
-    .menu-toggle {
-        display: block; /* Show menu toggle */
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-    }
+            .menu-toggle {
+                display: block; /* Show menu toggle */
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: white; /* Make the menu button visible */
+                position: absolute;
+                right: 20px; /* Align to the right */
+                top: 20px;
+                z-index: 10001; /* Ensure it's on top */
+            }
 
-    .menu.active {
-        display: block; /* Show menu when active */
-    }
-}
+            .menu.active {
+                display: block; /* Show menu when active */
+                position: absolute;
+                top: 80px; /* Adjusted to appear below the header */
+                left: 0;
+                width: 100%; /* Take full width on mobile */
+                background-color: rgba(0, 0, 0, 0.8); /* Add a background to the dropdown */
+            }
+
+            header ul {
+                flex-direction: column;
+            }
+
+            header ul li {
+                margin: 10px 0;
+            }
+        }
 
         header {
             width: 100%;
@@ -70,7 +81,6 @@
             z-index: 10000;
             transition: background 0.3s;
         }
-       
 
         header:hover {
             background: rgba(0, 0, 0, 0.8);
@@ -200,10 +210,10 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="menu">
             <ul>
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="Projects.html"  >Projects</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Projects.html">Projects</a></li>
                 <li><a href="Skills.html" class="active">Skills</a></li>
-                <li><a href="Contact.html"  >Contact</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -239,14 +249,13 @@
             });
         });
 
-
-
         function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('active'); // Toggle the active class
+            const menu = document.querySelector('.menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            menu.classList.toggle('active'); // Toggle the active class on the menu
+            menuToggle.classList.toggle('active'); // Optionally toggle active class on button too
         }
-
-        
     </script>
 </body>
 </html>

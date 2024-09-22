@@ -23,10 +23,6 @@ body {
     padding-top: 80px;
 }
 
-.menu {
-    display: block; /* Show the menu by default */
-}
-
 .menu-toggle {
     display: none;
     background: none;
@@ -37,6 +33,7 @@ body {
     z-index: 10001;
     margin-left: auto; /* This pushes the button to the right */
 }
+
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
