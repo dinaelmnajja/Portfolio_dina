@@ -5,7 +5,9 @@
     <title>
             Dina
     </title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="css_file/style.css">
 </head>
 
@@ -13,15 +15,18 @@
 <body>
 <header>
 
-
+    
     
     <div class="logo">Dina</div>
-    <ul>
-        <li><a href="index.html" class="active">Home</a> </li>
-        <li><a href="Projects.html" >Projects</a></li>
-        <li><a href="Skills.html" >Skills</a></li>
-        <li><a href="Contact.html" >Contact</a></li>
-    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
 </header>
 <section>
     <img src="3d_pics/stars.png" id="stars">
@@ -35,7 +40,13 @@
 <p>Hello, my name is Dina. I am a 22-year-old student currently pursuing a Master's degree in Cryptology and Cybersecurity. My academic journey has provided me with a strong foundation in cryptographic algorithms, network security, and advanced cryptographic protocols. I am deeply passionate about protecting sensitive information and ensuring the integrity and confidentiality of data.</p> <br>
     <p>Throughout my studies, I have engaged in various projects and research activities that have honed my skills in cryptography and cybersecurity. These experiences have not only solidified my theoretical knowledge but also allowed me to tackle real-world security challenges.</p> <br>
     <p>I am eager to bring my expertise and enthusiasm to the professional realm, where I can contribute to the development of innovative security solutions. My goal is to advance the field of information security by addressing emerging threats and enhancing the resilience of cryptographic systems.</p><br>
+
+    <br>
+
+     <p> Check my Resume here  <a href="Resume/Resume.pdf">  Link </a> </p>
 </div>
+
+
 
 
 <script>
@@ -74,6 +85,17 @@
                 link.classList.add('active');
             });
         });
+
+
+
+
+
+        function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active'); // Toggle the active class
+}
+
+
 </script>
 </body>
 
