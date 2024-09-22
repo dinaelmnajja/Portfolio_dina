@@ -1,104 +1,240 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-    <title>
-            Dina
-    </title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="css_file/style.css">
-</head>
-
-
-<body>
-<header>
-
-    
-    
-    <div class="logo">Dina</div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="menu">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html">Skills</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </div>
-</header>
-<section>
-    <img src="3d_pics/stars.png" id="stars">
-    <img src="3d_pics/moonn.png" id="moon">
-    <img src="3d_pics/mountains_behind.png" id="mountains_behind">
-    <h2 id="text"> Dina Elmnajja</h2>
-    <img src="3d_pics/mountains_front.png" id="mountains_front">
-</section>
-<div class="sec" id="sec"> 
-<h2> About me</h2>
-<p>Hello, my name is Dina. I am a 22-year-old student currently pursuing a Master's degree in Cryptology and Cybersecurity. My academic journey has provided me with a strong foundation in cryptographic algorithms, network security, and advanced cryptographic protocols. I am deeply passionate about protecting sensitive information and ensuring the integrity and confidentiality of data.</p> <br>
-    <p>Throughout my studies, I have engaged in various projects and research activities that have honed my skills in cryptography and cybersecurity. These experiences have not only solidified my theoretical knowledge but also allowed me to tackle real-world security challenges.</p> <br>
-    <p>I am eager to bring my expertise and enthusiasm to the professional realm, where I can contribute to the development of innovative security solutions. My goal is to advance the field of information security by addressing emerging threats and enhancing the resilience of cryptographic systems.</p><br>
-
-    <br>
-
-     <p> Check my Resume here  <a href="Resume/Resume.pdf">  Link </a> </p>
-</div>
-
-
-
-
-<script>
-    let stars = document.getElementById('stars');
-    let moon = document.getElementById('moon');
-    let  mountains_behind= document.getElementById('mountains_behind');
-    let mountains_front = document.getElementById('mountains_front');
-    let text = document.getElementById('text');
-    let btn = document.getElementById('btn');
-    let header = document.querySelector('header');
-
-
-
-    window.addEventListener('scroll',function(){
-        let value= window.scrollY;
-        stars.style.left= value * 0.25 + 'px';
-        moon.style.top= value * 1.25 + 'px';
-        mountains_behind.style.top= value * 0.5 + 'px';
-        mountains_front.style.top= value * 0 + 'px';
-        text.style.marginRight= value*4+ 'px';
-        text.style.marginTop= value* 1.5 + 'px';
-        btn.style.marginTop= value* 1.5 + 'px';
-        header.style.top= value * 0.5 + 'px';
-
-
-    })
-    
-
-
-
-    // JavaScript to set active class on click
-    const links = document.querySelectorAll('header ul li a');
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                links.forEach(otherLink => otherLink.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-
-
-
-
-
-        function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active'); // Toggle the active class
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
-</script>
-</body>
 
 
 
-</html>
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: linear-gradient(#2b1055,#7597de);
+    padding-top: 80px;
+}
+
+.menu {
+    display: block; /* Show the menu by default */
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active */
+    }
+}
+
+
+header {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: background 0.3s;
+}
+
+header:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li {
+            list-style: none;
+            margin-left: 84px;
+            margin-right: 84px;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        header ul li a:hover,
+        header ul li a.active {
+            background: #fff;
+            color: #2b1055;
+        }
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        margin-top: 160px;
+    }
+}
+
+
+section{
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+
+
+}
+
+section::before{
+
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+
+}
+
+section img{
+
+    position: absolute;
+    top :0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events:none;
+
+}
+section img#moon
+{
+    mix-blend-mode: screen;
+
+}
+
+section img#mountains_front
+{
+z-index: 10;
+
+}
+
+#text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7vw;
+    z-index: 9;
+    right: -350px;
+    
+
+}
+#btn{
+text-decoration: none;
+display: inline-block;
+padding: 8px 30px;
+border-radius: 40px;
+background: #fff;
+color: #2b1055;
+font-size: 1.5em;
+z-index: 9;
+transform: translateY(100px);
+
+}
+.sec {
+
+    position:relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h2{
+
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+.sec p{
+
+    font-size: 1.2em;
+    
+    color: #fff;
+
+}
+
