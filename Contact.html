@@ -11,37 +11,47 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-        body {
+    
+body {
             min-height: 100vh;
             background: linear-gradient(#2b1055, #7597de);
+            margin: 0;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; /* Ensure no scrollbars appear */
+            position: relative; /* Contain flowers within this element */
             padding-top: 80px;
         }
+
         .menu {
-            display: block;
-        }
-        .menu-toggle {
-            display: none;
-        }
-        @media (max-width: 768px) {
-            .menu {
-                display: none; /* Hide menu on small screens */
-            }
-            .menu-toggle {
-                display: block; /* Show menu toggle */
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: white; /* Change color for visibility */
-            }
-            .menu.active {
-                display: block; /* Show menu when active */
-            }
-        }
+    display: block; /* Show the menu by default */
+}
+
+.menu-toggle {
+    display: none; /* Hide the menu toggle by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle */
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .menu.active {
+        display: block; /* Show menu when active */
+    }
+}
+
         header {
             width: 100%;
             padding: 20px 50px;
@@ -54,31 +64,37 @@
             z-index: 10000;
             transition: background 0.3s;
         }
+
         header:hover {
             background: rgba(0, 0, 0, 0.8);
         }
+
         header .logo {
             font-size: 1.5em;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
+
         header ul {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         header ul li {
             list-style: none;
             margin-left: 84px;
             margin-right: 84px;
         }
+
         header ul li a {
             text-decoration: none;
             padding: 6px 15px;
             color: #fff;
             border-radius: 20px;
         }
+
         header ul li a:hover,
         header ul li a.active {
             background: #fff;
@@ -211,7 +227,7 @@
 <body>
 <header>
     <div class="logo">Dina</div>
-       
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="menu">
             <ul>
                 <li><a href="index.html" >Home</a></li>
