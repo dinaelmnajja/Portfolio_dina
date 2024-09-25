@@ -90,8 +90,8 @@ body {
 /* Responsive adjustments for mobile devices */
 @media (max-width: 820px) {
    body {
-        padding: -35px; /* Supprime tout remplissage du corps */
-        margin: -35px; /* Supprime toute marge du corps */
+        padding: -55px; /* Supprime tout remplissage du corps */
+        margin: -55px; /* Supprime toute marge du corps */
     }
     .about-container {
         display: block; /* Empile l'image et le texte verticalement */
