@@ -90,14 +90,14 @@ body {
 /* Responsive adjustments for mobile devices */
 @media (max-width: 820px) {
    body {
-        padding: 0; /* Supprime tout remplissage du corps */
-        margin: 0; /* Supprime toute marge du corps */
+        padding: -35px; /* Supprime tout remplissage du corps */
+        margin: -35px; /* Supprime toute marge du corps */
     }
     .about-container {
         display: block; /* Empile l'image et le texte verticalement */
-        width: 100vw; /* Utilise toute la largeur de la fenêtre */
-        padding: 0; /* Supprime le remplissage */
-        margin: 0; /* Supprime la marge */
+        width: 100%; /* Utilise toute la largeur de la fenêtre */
+        
+        margin: 0 5px;  /* Supprime la marge */
        
         box-sizing: border-box; /* Inclut le remplissage dans les dimensions */
     }
@@ -112,12 +112,16 @@ body {
     .about-text {
         
         
-        margin: 0; /* Supprime la marge pour utiliser tout l'espace */
+        margin: 0 5px; /* Supprime la marge pour utiliser tout l'espace */
         padding: 0; /* Supprime le remplissage pour maximiser l'espace */
         line-height: 1.5; /* Adjust the line spacing for better readability */
         font-size: 1.3em; /* Adjust font size for mobile */
         text-align: justify;/* Make text aligned for better appearance */
         word-wrap: break-word; /* Empêche le débordement */
+        
+        
+       
+       
     }
 
 
