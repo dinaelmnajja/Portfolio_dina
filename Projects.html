@@ -462,7 +462,7 @@ video {
                     <p>The figure shows ESP packets being exchanged between the IP addresses 10.0.12.1 and 10.0.23.1, which correspond to the interfaces on Routers R2 and R3, respectively. The encapsulated payload is encrypted, as shown by the hex data in the lower pane of the capture. This demonstrates the successful application of the IPsec VPN, ensuring that the communication between the two endpoints (PC1 and PC2) is secure.</p>
                 </div>
                 <div class="more-details">
-                    <p>For more details on the router configuration and the step-by-step process of setting up the IPsec VPN, please refer to the full report <a href="reports/projet_réseau.pdf">here</a>.</p>
+                    <p>For more details on the router configuration and the step-by-step process of setting up the IPsec VPN, please refer to the full report <a href="reports/projet_réseau.pdf" target="_blank">here</a>.</p>
                 </div>
              </div>
                 </div>
@@ -585,7 +585,7 @@ video {
 
                         <img src="pics_project/mushroom_app.png"
 
-                        <p> For testing the application, go to my GitHub page. <a href="https://github.com/dinaelmnajja/APP_Mushroom"> Click Here</a></p>
+                        <p> For testing the application, go to my GitHub page. <a href="https://github.com/dinaelmnajja/APP_Mushroom" target="_blank"> Click Here</a></p>
                 </main>
                 
             </div>
@@ -623,7 +623,7 @@ video {
      <h2>Simulation and Applications</h2>
      <p>Using Qt Designer, the project developed desktop applications demonstrating the implementation of error-correcting codes in cryptographic systems. One application implements the Vernam cipher for cryptography, while the other applies cyclic and Goppa codes for error correction. These applications showcase the practical integration of theoretical concepts.</p>
 
-     <a href="video/Crypto _App.mp4"> the video  of the applications </a>
+     <a href="video/Crypto _App.mp4" target="_blank" > the video  of the applications </a>
     
      <h2>Conclusion</h2>
      <p>This project highlights the significance of combining error-correcting codes with cryptography to enhance data security and integrity. It provides a comprehensive understanding of how these two fields intersect and benefit each other.</p>
@@ -907,7 +907,7 @@ video {
 
     <br>
 
-    If you want to try the app, check the URL here in my github. <a href="https://github.com/dinaelmnajja/Security_App">  Link </a>
+    If you want to try the app, check the URL here in my github. <a href="https://github.com/dinaelmnajja/Security_App" target="_blank" >  Link </a>
 
       </div>
    </div>
@@ -954,6 +954,153 @@ video {
 
         <br>
 
+
+
+
+        <h2> Overview </h2>
+
+        <br>
+
+        During my internship at the Office National des Aéroports (ONDA), based at Al Hoceima Cherif El Idrissi Airport, I focused on the security of the Moroccan Air Navigation IP Network (RINAM). This network plays a critical role in ensuring the smooth and secure transmission of data essential for air traffic management across the country. <br>
+        
+        The primary goal of my project was to strengthen the security of this complex network, ensuring it remains resilient against potential cyber threats.
+
+
+        <br>
+
+        <section id="vpn-ssh-explanation">
+            <h2>VPN and SSH: Securing Communication in Networks</h2>
+          
+            <section id="vpn">
+              <h3> I. Virtual Private Networks (VPN) – IPsec Protocol</h3>
+              <br>
+
+              <p>A <strong>Virtual Private Network (VPN)</strong> allows users to create a secure, encrypted connection over an untrusted network, such as the Internet. VPNs ensure privacy and security by encrypting data transmitted between the client and the server, or between two networks.</p>
+          
+              <br>
+
+              <h4>1. What is IPsec?</h4>
+
+              <br>
+
+              <p><strong>IPsec (Internet Protocol Security)</strong> is a suite of protocols designed to secure IP communications by authenticating and encrypting each IP packet in a communication session. IPsec operates at the network layer and is ideal for VPNs as it provides high-level security without modifying applications or protocols above the network layer.</p>
+               <br>
+
+              <h4>2. Components of IPsec</h4>
+
+              <br>
+
+              <ul>
+                <li><strong>Authentication Header (AH)</strong>: Provides authentication and integrity but does not encrypt the data. AH ensures data has not been altered in transit and verifies the sender’s identity.</li>
+                <li><strong>Encapsulating Security Payload (ESP)</strong>: Provides encryption, authentication, and integrity. ESP ensures confidentiality by encrypting data and verifying it has not been tampered with.</li>
+              </ul>
+          
+
+              <br>
+
+              <h4>3. Modes of IPsec</h4>
+              <br>
+
+              <ul>
+                <li><strong>Transport Mode</strong>: Only the payload of the IP packet is encrypted or authenticated. Commonly used in end-to-end communication between two hosts.</li>
+                <li><strong>Tunnel Mode</strong>: Encrypts the entire IP packet (header and payload) and encapsulates it into a new packet with a new header. This mode is used in site-to-site VPNs.</li>
+              </ul>
+               <br>
+
+              <h4>4. Key Exchange and Management</h4>
+              <br>
+
+              <p>IPsec uses the <strong>Internet Key Exchange (IKE)</strong> protocol to securely exchange encryption keys and negotiate security associations between peers. IKE handles peer authentication, key exchange, and the establishment of a secure communication channel.</p>
+               
+              <br>
+
+              <h4>5. Benefits of IPsec VPN</h4>
+              <br>
+
+              <ul>
+                <li><strong>Data Encryption</strong>: IPsec encrypts all data, protecting it from unauthorized access.</li>
+                <li><strong>Authentication</strong>: IPsec authenticates both sender and receiver, ensuring data is exchanged only between trusted parties.</li>
+                <li><strong>Data Integrity</strong>: IPsec prevents data tampering by ensuring any modifications during transit are detected.</li>
+                <li><strong>Wide Compatibility</strong>: Since IPsec works at the network layer, it can secure many types of network traffic without modifying applications.</li>
+              </ul>
+               
+              <br>
+
+              <h4>6. Practical Applications of IPsec VPN</h4>
+              <br>
+
+              <ul>
+                <li><strong>Site-to-Site VPN</strong>: Secures communication between two networks (e.g., branch office and headquarters).</li>
+                <li><strong>Remote Access VPN</strong>: Allows remote users to securely connect to the company network over the internet.</li>
+                <li><strong>Protecting Sensitive Data</strong>: Commonly used in industries like finance and healthcare to secure sensitive data transmitted over public networks.</li>
+              </ul>
+            </section>
+          
+            <section id="ssh">
+                <br>
+
+              <h3>II. Secure Shell (SSH)</h3>
+              <br>
+
+              <p><strong>SSH (Secure Shell)</strong> is a cryptographic protocol that allows secure remote access to devices and systems over an untrusted network. SSH provides encrypted communication, secure file transfer, and port forwarding, ensuring data confidentiality and integrity.</p>
+               <br>
+
+              <h4>1. How SSH Works</h4>
+              <br>
+
+              <p>SSH establishes a secure connection using public-key cryptography. The <strong>SSH client</strong> initiates the connection, and the <strong>SSH server</strong> listens for incoming connections.</p>
+               <br>
+
+              <h4>2. Key Features of SSH</h4>
+              <br>
+
+              <ul>
+                <li><strong>Encryption</strong>: SSH encrypts all data exchanged between the client and server, preventing unauthorized access.</li>
+                <li><strong>Authentication</strong>: SSH uses password or public key authentication to verify the client’s identity.</li>
+                <li><strong>Data Integrity</strong>: SSH ensures the data is not altered during transmission using hashing techniques.</li>
+              </ul>
+          
+              <br>
+
+              <h4>3. SSH Protocol Architecture</h4>
+              <br>
+
+              <ul>
+                <li><strong>Transport Layer</strong>: Establishes encryption and data integrity for secure communication.</li>
+                <li><strong>Authentication Layer</strong>: Authenticates the client using passwords or public keys.</li>
+                <li><strong>Connection Layer</strong>: Manages multiple communication channels over a single SSH connection for tasks like remote command execution or file transfer.</li>
+              </ul>
+              
+              <br>
+
+              <h4>4. Benefits of SSH</h4>
+              <br>
+
+              <ul>
+                <li><strong>Strong Encryption</strong>: SSH encrypts all communication, preventing eavesdropping and man-in-the-middle attacks.</li>
+                <li><strong>Secure Remote Access</strong>: SSH allows secure administration of remote servers and devices.</li>
+                <li><strong>File Transfers</strong>: SSH supports secure file transfers using SCP (Secure Copy Protocol) and SFTP (Secure File Transfer Protocol).</li>
+                <li><strong>Port Forwarding</strong>: SSH allows tunneling of other protocols through its secure connection, protecting otherwise unsecured data transmissions.</li>
+              </ul>
+          <br>
+              <h4>5. Practical Applications of SSH</h4>
+
+              <br>
+
+              <ul>
+                <li><strong>Remote Server Management</strong>: Used by administrators to securely access and manage remote servers.</li>
+                <li><strong>Secure File Transfer</strong>: SCP and SFTP allow secure file transfers between systems.</li>
+                <li><strong>Tunneling</strong>: SSH can tunnel non-secure protocols (e.g., HTTP) through its secure connection, enhancing overall security.</li>
+              </ul>
+            </section>
+          </section>
+          <br>
+          <br>
+          <br>
+
+
+
+          <p>To provide more details, <a href="reports/Internship_Report.pdf" target="_blank">here is my report</a>.</p>
 
 
        </div>
