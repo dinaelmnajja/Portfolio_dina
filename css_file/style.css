@@ -88,11 +88,11 @@ body {
 
 
 /* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .about-container {
         display: block; /* Stacks the image and text vertically */
-        width: 100vw; /* Full width of the viewport */
-        height: auto; 
+        width: 100%; /* Full width of the viewport */
+        height: 100%;  
     }
 
     .profile-pic {
