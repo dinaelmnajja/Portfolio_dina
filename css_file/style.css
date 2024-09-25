@@ -102,7 +102,11 @@ body {
         object-fit: cover; /* Ensure the image fits the circle */
     }
     .about-text {
-        flex: 1; /* Allow text to take up the remaining space */
+        padding: 20px;
+        line-height: 1.6; /* Adjust the line spacing for better readability */
+        font-size: 1em; /* Adjust font size for mobile */
+        text-align: justify; /* Make text aligned for better appearance */
+        word-wrap: break-word; /* Prevent long words from overflowing */
     }
 
     
