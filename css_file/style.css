@@ -92,6 +92,7 @@ body {
    body {
         padding: -55px; /* Supprime tout remplissage du corps */
         margin: -55px; /* Supprime toute marge du corps */
+       overflow-x: hidden;
     }
     .about-container {
         display: block; /* Empile l'image et le texte verticalement */
