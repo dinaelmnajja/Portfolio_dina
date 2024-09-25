@@ -114,7 +114,7 @@ body {
     }
 
     .about-text {
-        text-align: left; /* Adjust text alignment for readability if needed */
+        text-align: center; /* Adjust text alignment for readability if needed */
     }
 }
 
