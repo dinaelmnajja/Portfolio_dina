@@ -87,7 +87,7 @@ body {
 }
 
 /* Center the profile pic on mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .profile-pic {
         width: 100px; /* Set a fixed width for mobile */
         height: 100px; /* Set a fixed height for mobile (same as width) */
@@ -102,7 +102,7 @@ body {
 }
 
 /* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .about-container {
         display: block; /* Stacks the image and text vertically */
         text-align: center; /* Centers text on mobile */
@@ -196,7 +196,7 @@ header:hover {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header {
         flex-direction: column;
     }
