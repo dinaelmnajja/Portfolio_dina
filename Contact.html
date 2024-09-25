@@ -36,31 +36,33 @@
 
         /* Media query for mobile devices */
         @media (max-width: 768px) {
-            .menu {
-                display: none; /* Hide menu on small screens */
-            }
+    .menu {
+        display: none;
+    }
 
-            .menu-toggle {
-                display: block; /* Show menu toggle */
-                background: none;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                color: white; /* Make the menu button visible */
-                position: absolute;
-                right: 20px; /* Align to the right */
-                top: 20px;
-                z-index: 10001; /* Ensure it's on top */
-            }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 10001;
+    }
 
-            .menu.active {
-                display: block; /* Show menu when active */
-                position: absolute;
-                top: 80px; /* Adjusted to appear below the header */
-                left: 0;
-                width: 100%; /* Take full width on mobile */
-                background-color: rgba(0, 0, 0, 0.8); /* Add a background to the dropdown */
-            }
+    .menu.active {
+        display: flex; /* Change this to flex or block */
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column; /* Stack menu items */
+    }
+
 
             header ul {
                 flex-direction: column;
