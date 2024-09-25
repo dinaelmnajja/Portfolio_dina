@@ -96,8 +96,8 @@ body {
     }
 
     .profile-pic {
-        width: 100px; /* Set a fixed width for mobile */
-        height: 100px; /* Set a fixed height for mobile (same as width) */
+        width: 200px; /* Set a fixed width for mobile */
+        height: 200px; /* Set a fixed height for mobile (same as width) */
         border-radius: 50%; /* Maintain the circular shape */
         margin: 0 auto 40px auto; /* Center the image and add spacing below */
         object-fit: cover; /* Ensure the image fits the circle */
