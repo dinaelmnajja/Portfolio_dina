@@ -91,7 +91,8 @@ body {
 @media (max-width: 768px) {
     .about-container {
         display: block; /* Stacks the image and text vertically */
-        text-align: center; /* Centers text on mobile */
+        width: 100vw; /* Full width of the viewport */
+        height: auto; 
     }
 
     .profile-pic {
