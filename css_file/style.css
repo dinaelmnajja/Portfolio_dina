@@ -36,7 +36,7 @@ body {
 
 
 /* Media query for mobile devices */
-@media (max-width: 900px) and (min-width:700px) {
+@media (max-width: 900px)  {
     .menu {
         display: none; /* Hide menu on small screens */
     }
