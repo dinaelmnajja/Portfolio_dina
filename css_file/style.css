@@ -97,9 +97,7 @@ body {
     .about-container {
         display: block; /* Empile l'image et le texte verticalement */
         width: 100%; /* Utilise toute la largeur de la fenêtre */
-        
         margin: 0 5px;  /* Supprime la marge */
-       
         box-sizing: border-box; /* Inclut le remplissage dans les dimensions */
     }
 
@@ -117,7 +115,7 @@ body {
         padding: 0; /* Supprime le remplissage pour maximiser l'espace */
         line-height: 1.5; /* Adjust the line spacing for better readability */
         font-size: 1.3em; /* Adjust font size for mobile */
-        text-align: justify;/* Make text aligned for better appearance */
+        text-align:left;/* Make text aligned for better appearance */
         word-wrap: break-word; /* Empêche le débordement */
         
         
