@@ -4,7 +4,6 @@
     <title>Dina's Contacts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
         @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
         * {
             margin: 0;
@@ -21,48 +20,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Ensure no scrollbars appear */
-            position: relative; /* Contain flowers within this element */
+            position: relative;
             padding-top: 80px;
         }
 
         .menu {
-            display: block; /* Show the menu by default */
+            display: block;
         }
 
         .menu-toggle {
-            display: none; /* Hide the menu toggle by default */
+            display: none;
         }
 
         /* Media query for mobile devices */
         @media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
+            .menu {
+                display: none;
+            }
 
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: white;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        z-index: 10001;
-    }
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: white;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                z-index: 10001;
+            }
 
-    .menu.active {
-        display: flex; /* Change this to flex or block */
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        flex-direction: column; /* Stack menu items */
-    }
-
+            .menu.active {
+                display: flex;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                flex-direction: column;
+            }
 
             header ul {
                 flex-direction: column;
@@ -131,7 +128,6 @@
             margin-top: 120px;
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
             align-items: center;
             position: relative;
         }
@@ -172,9 +168,9 @@
             width: 150px;
             height: 150px;
             position: absolute;
-            top: -75px; /* Adjust based on the image height */
-            right: -75px; /* Adjust based on the image width */
-            animation: fadeIn 0s ease-in-out 0.5s;
+            top: -75px;
+            right: -75px;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .flowers {
@@ -183,16 +179,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Prevent interaction with flowers */
+            pointer-events: none;
+            z-index: 0;
             overflow: hidden;
-            z-index: 0; /* Ensure flowers are behind other content */
         }
 
         .flower {
             position: absolute;
             width: 30px;
             height: 30px;
-            background-image: url('design/flower_.png'); /* Ensure this path is correct */
+            background-image: url('design/flower_.png');
             background-size: contain;
             background-repeat: no-repeat;
             animation: fall linear infinite;
@@ -220,7 +216,6 @@
                 box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
             }
         }
-
     </style>
 </head>
 <body>
@@ -231,7 +226,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Skills.html" >Skills</a></li>
+            <li><a href="Skills.html">Skills</a></li>
             <li><a href="Contact.html" class="active">Contact</a></li>
         </ul>
     </div>
@@ -239,7 +234,6 @@
 
 <div class="container">
     <h1>My Contacts</h1>
-
     <div class="social-icons">
         <a href="mailto:dinaelmnajja@gmail.com">
             <img src="icons/email.jpg" alt="Email">
@@ -266,7 +260,7 @@
 <script>
     function toggleMenu() {
         const menu = document.querySelector('.menu');
-        menu.classList.toggle('active'); // Toggle the active class
+        menu.classList.toggle('active');
     }
 
     function getRandom(min, max) {
@@ -279,10 +273,10 @@
         flower.style.left = `${getRandom(0, 100)}vw`;
         flower.style.animationDuration = `${getRandom(5, 10)}s`;
         document.querySelector('.flowers').appendChild(flower);
-        
+
         setTimeout(() => {
             flower.remove();
-        }, 10000); // Remove the flower after it has fallen
+        }, 10000); // Remove after 10 seconds
     }
 
     setInterval(createFlower, 500);
