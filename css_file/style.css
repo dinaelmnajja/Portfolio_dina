@@ -86,20 +86,6 @@ body {
     }
 }
 
-/* Center the profile pic on mobile */
-@media (max-width: 768px) {
-    .profile-pic {
-        width: 100px; /* Set a fixed width for mobile */
-        height: 100px; /* Set a fixed height for mobile (same as width) */
-        border-radius: 50%; /* Maintain the circular shape */
-        margin: 0 auto 40px auto; /* Center the image and add spacing below */
-        object-fit: cover; /* Ensure the image fits the circle */
-    }
-}
-
-.about-text {
-    flex: 1; /* Allow text to take up the remaining space */
-}
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
@@ -109,11 +95,17 @@ body {
     }
 
     .profile-pic {
-        width: 100px; /* Smaller profile picture on mobile */
-        margin: 0 auto 20px auto; /* Centers the picture and adds space below it */
+        width: 100px; /* Set a fixed width for mobile */
+        height: 100px; /* Set a fixed height for mobile (same as width) */
+        border-radius: 50%; /* Maintain the circular shape */
+        margin: 0 auto 40px auto; /* Center the image and add spacing below */
+        object-fit: cover; /* Ensure the image fits the circle */
+    }
+    .about-text {
+        flex: 1; /* Allow text to take up the remaining space */
     }
 
-   
+    
 }
 
 
